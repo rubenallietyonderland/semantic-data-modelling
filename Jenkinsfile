@@ -3,6 +3,11 @@ pipeline {
         label 'bi'
     }
 
+    triggers {
+        // Only works for Multibranch Pipeline if webhooks are correctly set
+        pollSCM('H/5 * * * *')
+    }
+
     options {
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '90', numToKeepStr: '30')
         durabilityHint 'MAX_SURVIVABILITY'
