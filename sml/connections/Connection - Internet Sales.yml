@@ -1,6 +1,13 @@
-unique_name: Connection - Internet Sales
-label: Connection - Internet Sales
+unique_name: Postgres
 object_type: connection
-as_connection: Postgres
-database: atscale_tutorial_data
-schema: as_adventure
+as_connection: {{CONNECTION}}
+label: {{LABEL}}
+database: {{DB_NAME}}
+schema: {{DB_SCHEMA}}
+
+# unique_name: Connection - Internet Sales
+# label: Connection - Internet Sales
+# object_type: connection
+# as_connection: Postgres
+# database: atscale_tutorial_data
+# schema: as_adventure
