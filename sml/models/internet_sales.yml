@@ -1,0 +1,257 @@
+unique_name: internet_sales
+object_type: model
+label: Internet Sales
+visible: true
+
+relationships:
+
+  - unique_name: factinternetsales_Date_Dimension_Order
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: Date Dimension
+      level: Day
+    role_play: "Order {0}"
+
+  - unique_name: factinternetsales_Date_Dimension_Ship
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    to:
+      dimension: Date Dimension
+      level: Day
+    role_play: "Ship {0}"
+
+  - unique_name: factinternetsales_Date_Dimension_Order_1
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: Date Dimension
+      level: Reporting Day
+    role_play: "Order {0}"
+
+  - unique_name: factinternetsales_Date_Dimension_Ship_1
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    to:
+      dimension: Date Dimension
+      level: Reporting Day
+    role_play: "Ship {0}"
+
+  - unique_name: factinternetsales_Product_Dimension
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
+
+  - unique_name: factinternetsales_Order_Dimension
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - salesorderlinenumber
+        - salesordernumber
+        - currencykey
+    to:
+      dimension: Order Dimension
+      level: Order Line Item
+
+  - unique_name: factinternetsales_Date_Dimension_Order_2
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: Date Dimension
+      level: Custom Day
+    role_play: "Order {0}"
+
+  - unique_name: factinternetsales_Date_Dimension_Ship_2
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    to:
+      dimension: Date Dimension
+      level: Custom Day
+    role_play: "Ship {0}"
+
+  - unique_name: factinternetsales_Customer_Dimension
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: Customer Dimension
+      level: Customer Name
+
+dimensions:
+  - Color Dimension
+  - Size Dimension
+  - Style Dimension
+  - Weight
+
+metrics:
+
+  - unique_name: Calculated Tax
+    folder: Sales Metrics
+
+  - unique_name: Customer Count
+    folder: Customer Metrics
+
+  - unique_name: Estimated Customer Count
+    folder: Customer Metrics
+
+  - unique_name: Last Product Unit Price
+    folder: Product Metrics
+
+  - unique_name: Maximum Order Date
+    folder: Time Relative
+
+  - unique_name: Maximum Tax Amount
+    folder: Sales Metrics
+
+  - unique_name: Minimum Order Date
+    folder: Time Relative
+
+  - unique_name: Order Quantity
+    folder: Sales Metrics
+
+  - unique_name: Sales Amount
+    folder: Sales Metrics
+
+  - unique_name: Average Sales Amount
+    folder: Sales Metrics
+
+  - unique_name: Sales Amount Standard Deviation
+    folder: Sales Metrics
+
+  - unique_name: Sold Product Non Distinct Count
+    folder: Sales Metrics
+
+  - unique_name: Average Customer Count per Order
+    folder: Time Relative
+
+  - unique_name: Average Est Customer Count per Order
+    folder: Time Relative
+
+  - unique_name: Average Last Product Unit Count per Order
+    folder: Time Relative
+
+  - unique_name: Average Max Tax Count per Order
+    folder: Time Relative
+
+  - unique_name: Average Sales Amount SD Count per Order
+    folder: Time Relative
+
+  - unique_name: Average Sales per Order
+    folder: Time Relative
+
+  - unique_name: Average Sold Product per Order
+    folder: Time Relative
+
+  - unique_name: Customer Count 30 Period Moving Average
+    folder: Time Relative
+
+  - unique_name: Customer Count Next Period
+    folder: Time Relative
+
+  - unique_name: Customer Count Prior Period
+    folder: Time Relative
+
+  - unique_name: Customer Count Prior Period Growth
+    folder: Time Relative
+
+  - unique_name: Customer Count Prior Period Growth Percent
+    folder: Time Relative
+
+  - unique_name: Customer Count Prior Year
+    folder: Time Relative
+
+  - unique_name: Customer Count Year to Date
+    folder: Time Relative
+
+  - unique_name: Sales Amount Prior Year
+    folder: Time Relative
+
+  - unique_name: Sales Amount 30 Period Moving Average
+    folder: Time Relative
+
+  - unique_name: Sales Amount Next Period
+    folder: Time Relative
+
+  - unique_name: Sales Amount Prior Period
+    folder: Time Relative
+
+  - unique_name: Sales Amount Prior Period Growth
+    folder: Time Relative
+
+  - unique_name: Sales Amount Prior Period Growth Percent
+    folder: Time Relative
+
+  - unique_name: Sales Amount Year to Date
+    folder: Time Relative
+
+perspectives:
+  - unique_name: internet_sales_no_pii
+    dimensions:
+      - hierarchies:
+          - levels:
+              - Customer Name
+            name: Customer Hierarchy
+        name: Customer Dimension
+        secondaryattributes:
+          - d_firstname
+          - d_lastname
+
+drillthroughs:
+
+  - unique_name: Customer Details
+    attributes:
+
+      - name: State
+        dimension: Geography Dimension
+
+      - name: Customer Name
+        dimension: Customer Dimension
+
+      - name: City
+        dimension: Geography Dimension
+
+      - name: Zip Code
+        dimension: Geography Dimension
+
+    metrics:
+      - Order Quantity
+      - Sales Amount
+
+  - unique_name: Shipping Details
+    attributes:
+
+      - name: Size
+        dimension: Size Dimension
+
+      - name: Style
+        dimension: Style Dimension
+
+      - name: Color
+        dimension: Color Dimension
+
+      - name: Customer Name
+        dimension: Customer Dimension
+
+      - name: Product Name
+        dimension: Product Dimension
+
+    metrics:
+      - Order Quantity
+      - Sales Amount

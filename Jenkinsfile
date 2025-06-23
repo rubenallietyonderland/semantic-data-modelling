@@ -1,26 +1,81 @@
 pipeline {
-    agent {
-        label 'bi'
-    }
+    agent 'bi'
 
-    triggers {
-        // Only works for Multibranch Pipeline if webhooks are correctly set
-        pollSCM('H/5 * * * *')
+    environment {
+        // Set default environment, can be overridden by branch logic
+        ATSCALE_ENV = 'dev'
+        // Credentials for GitHub and AtScale
+        GITHUB_CREDENTIALS = 'github-tmp-credentials'
+        ATSCALE_API_KEY = credentials('atscale-api-key')
     }
 
     options {
-        buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '90', numToKeepStr: '30')
-        durabilityHint 'MAX_SURVIVABILITY'
-        timeout(300)
+        skipDefaultCheckout()
         timestamps()
-        ansiColor('xterm')
     }
 
     stages {
-        stage('Hello') {
+        stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-tmp-credentials', url: 'https://github.com/rubenallietyonderland/semantic-data-modelling.git']])
+                checkout scmGit(
+                    branches: [[name: '*/main']],
+                    extensions: [],
+                    userRemoteConfigs: [[
+                        credentialsId: env.GITHUB_CREDENTIALS,
+                        url: 'https://github.com/rubenallietyonderland/semantic-data-modelling.git'
+                    ]]
+                )
             }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install -g @atscale/sml-cli'
+                sh 'npm ci'
+            }
+        }
+
+        stage('Lint & Validate Models') {
+            steps {
+                sh 'sml-cli validate --all'
+            }
+        }
+
+        stage('Test Models') {
+            when {
+                branch 'main'
+                // Add more branches as needed
+            }
+            steps {
+                // Add your test commands here
+                echo 'Running model tests...'
+            }
+        }
+
+        stage('Deploy to AtScale') {
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'release/*'
+                }
+            }
+            environment {
+                // Use different .env files for dev/prod
+                ATSCALE_ENV = (env.BRANCH_NAME == 'main') ? 'dev' : 'prod'
+            }
+            steps {
+                script {
+                    // Copy the correct .env file for the environment
+                    sh "cp .env.${env.ATSCALE_ENV} .env"
+                }
+                sh 'sml-cli deploy --catalog catalog.yml --api-key $ATSCALE_API_KEY'
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
         }
     }
 }
