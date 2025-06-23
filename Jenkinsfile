@@ -6,7 +6,7 @@ pipeline {
         ATSCALE_ENV = 'dev'
         // Credentials for GitHub and AtScale
         GITHUB_CREDENTIALS = 'github-tmp-credentials'
-        ATSCALE_API_KEY = credentials('atscale-api-key')
+        ATSCALE_API_KEY = credentials('atscale-api-key') // request cloudops to add both dev & prd atscale api keys
     }
 
     options {
@@ -37,7 +37,7 @@ pipeline {
 
         stage('Lint & Validate Models') {
             steps {
-                sh 'sml-cli validate --all'
+                sh 'sml-cli ./sml validate --all'
             }
         }
 
@@ -68,7 +68,7 @@ pipeline {
                     // Copy the correct .env file for the environment
                     sh "cp .env.${env.ATSCALE_ENV} .env"
                 }
-                sh 'sml-cli deploy --catalog catalog.yml --api-key $ATSCALE_API_KEY'
+                sh 'sml-cli deploy ./sml --catalog catalog.yml --api-key $ATSCALE_API_KEY'
             }
         }
     }
