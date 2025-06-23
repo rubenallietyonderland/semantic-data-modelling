@@ -1,4 +1,4 @@
-unique_name: Postgres
+unique_name: Connection - Internet Sales
 object_type: connection
 as_connection: {{CONNECTION}}
 label: {{LABEL}}
