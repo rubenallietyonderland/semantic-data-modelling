@@ -1,6 +1,6 @@
 unique_name: m_FCT_WARRANTY_CASES_CASE_ID_dcount
 object_type: metric
-label: Case ID
+label: distinct_count_warranty_cases
 description: distinct count of warranty cases
 calculation_method: count distinct
 column: CASE_ID

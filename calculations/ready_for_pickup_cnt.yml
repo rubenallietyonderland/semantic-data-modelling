@@ -1,10 +1,6 @@
 unique_name: ready_for_pickup_cnt
 object_type: metric_calc
 label: Ready for Pickup Cases
-expression: |-
-  CASE 
-      WHEN [FCT_WARRANTY_CASES].CurrentMember.Name="ready-for-pickup" THEN 1
-      ELSE 0
-  END
+expression: SUM([FCT_WARRANTY_CASES].[CASE_ID].MEMBERS,[FCT_WARRANTY_CASES].[ready_for_pickup_flag])
 is_hidden: false
 mdx_aggregate_function: SUM
