@@ -111,5 +111,5 @@ columns:
     sql: >-
       COUNT(CASE WHEN FCT_WARRANTY_CASES.logistic_status = 'ready-for-pickup'
       THEN 1 END)
-connection_id: con_ACC_LH_817_MART_SERVICES
+connection_id: con_MART_SERVICES
 table: FCT_WARRANTY_CASES

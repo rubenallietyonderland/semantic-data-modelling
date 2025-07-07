@@ -1,12 +1,6 @@
 unique_name: WARRANTY_CASES
 object_type: model
 label: TEST
-metrics: []
-relationships:
-  - unique_name: FCT_WARRANTY_CASES_empty_dimension
-    from:
-      dataset: FCT_WARRANTY_CASES
-      join_columns: []
-    to:
-      dimension: ''
-      level: ''
+metrics:
+  - unique_name: m_FCT_WARRANTY_CASES_CASE_ID_dcount
+relationships: []
