@@ -1,6 +1,7 @@
 unique_name: ready_for_pickup_cnt
 object_type: metric_calc
 label: Ready for Pickup Cases
-expression: SUM([FCT_WARRANTY_CASES].[ready_for_pickup_flag])
+expression: Sum([WARRANTY_CASES].[ready_for_pickup_flag])
+mdx_aggregate_function: SUM
 is_hidden: false
 # mdx_aggregate_function: SUM

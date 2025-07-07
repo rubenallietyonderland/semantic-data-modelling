@@ -40,5 +40,5 @@ columns:
     data_type: datetime
   - name: OPS_LOAD_TIMESTAMP
     data_type: datetime
-connection_id: con_ACC_LH_817_OPS_DATES
+connection_id: con_OPS_DATES
 table: DIM_OPS_DATES
