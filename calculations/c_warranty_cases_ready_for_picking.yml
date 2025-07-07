@@ -4,7 +4,8 @@ label: c_warranty_cases_ready_for_picking
 expression: |-
   COUNT(
     FILTER(
-      [FCT_WARRANTY_CASES].[LOGISTIC_STATUS] = "ready-for-pickup"
+      [FCT_WARRANTY_CASES].[LOGISTIC_STATUS].MEMBERS,
+      [FCT_WARRANTY_CASES].[LOGISTIC_STATUS].CURRENTMEMBER.NAME = "ready-for-pickup"
     )
   )
 is_hidden: false
