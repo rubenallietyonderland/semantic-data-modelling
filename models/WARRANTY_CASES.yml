@@ -3,5 +3,5 @@ object_type: model
 label: TEST
 metrics:
   - unique_name: m_FCT_WARRANTY_CASES_CASE_ID_dcount
-  - unique_name: ready-for-pickup-cnt
+  - unique_name: ready_for_pickup_cnt
 relationships: []
