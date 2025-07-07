@@ -1,0 +1,44 @@
+unique_name: DIM_OPS_DATES
+object_type: dataset
+label: DIM_OPS_DATES
+columns:
+  - name: DATE_PK
+    data_type: string
+  - name: YEAR_MONTH_FK
+    data_type: string
+  - name: YEAR_WEEK_FK
+    data_type: string
+  - name: DATE_ID
+    data_type: decimal(11,0)
+  - name: YEAR_MONTH_ID
+    data_type: decimal(8,0)
+  - name: YEAR_WEEK_ID
+    data_type: decimal(8,0)
+  - name: CALENDAR_DATE
+    data_type: date
+  - name: YEAR
+    data_type: decimal(4,0)
+  - name: QUARTER
+    data_type: decimal(2,0)
+  - name: MONTH
+    data_type: decimal(2,0)
+  - name: WEEKDAY
+    data_type: decimal(2,0)
+  - name: WEEKDAY_NAME_SHORT
+    data_type: string
+  - name: WEEKDAY_NAME_LONG
+    data_type: string
+  - name: IS_WEEKEND
+    data_type: decimal(1,0)
+  - name: CALENDAR_SEASON
+    data_type: string
+  - name: ACADEMIC_YEAR
+    data_type: string
+  - name: IS_REPORTING_DAY
+    data_type: decimal(1,0)
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: OPS_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_817_OPS_DATES
+table: DIM_OPS_DATES

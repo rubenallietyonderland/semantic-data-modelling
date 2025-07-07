@@ -3,4 +3,4 @@ object_type: connection
 label: con_MART_SERVICES
 as_connection: {{CONNECTION}}
 database: {{DB_NAME}}
-schema: {{SCHEMA}}
+schema: MART_SERVICES
