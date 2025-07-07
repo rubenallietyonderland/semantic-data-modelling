@@ -1,6 +1,6 @@
-unique_name: internet_sales_catalog
+unique_name: warranty_cases_catalog
 object_type: catalog
-label: Internet Sales
+label: warranty cases
 version: 1.0
 aggressive_agg_promotion: false
 build_speculative_aggs: false

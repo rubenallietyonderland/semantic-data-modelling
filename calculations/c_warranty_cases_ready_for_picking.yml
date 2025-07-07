@@ -9,3 +9,4 @@ expression: |-
     )
   )
 is_hidden: false
+mdx_aggregate_function: COUNT

@@ -1,6 +1,0 @@
-unique_name: warranty_cases
-object_type: model
-label: warranty_cases
-metrics:
-  - unique_name: m_FCT_WARRANTY_CASES_CASE_ID_dc
-relationships: []
