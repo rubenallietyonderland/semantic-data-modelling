@@ -1,0 +1,10 @@
+unique_name: c_warranty_cases_ready_for_picking
+object_type: metric_calc
+label: c_warranty_cases_ready_for_picking
+expression: |-
+  COUNT(
+    FILTER(
+      [FCT_WARRANTY_CASES].[LOGISTIC_STATUS] = "ready-for-pickup"
+    )
+  )
+is_hidden: false

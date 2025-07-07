@@ -1,6 +1,0 @@
-unique_name: Connection - Internet Sales
-label: {{LABEL}}
-object_type: connection
-as_connection: {{CONNECTION}}
-database: {{DB_NAME}}
-schema: {{SCHEMA}}

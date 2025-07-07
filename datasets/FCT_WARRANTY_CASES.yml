@@ -1,0 +1,110 @@
+unique_name: FCT_WARRANTY_CASES
+object_type: dataset
+label: FCT_WARRANTY_CASES
+columns:
+  - name: CASE_PK
+    data_type: string
+  - name: CASE_ID
+    data_type: decimal(38,0)
+  - name: BUSINESS_UNIT_ID
+    data_type: decimal(38,0)
+  - name: SHOP_ID
+    data_type: decimal(38,0)
+  - name: MARKET_ID
+    data_type: decimal(38,0)
+  - name: SKU_ID
+    data_type: string
+  - name: LABEL
+    data_type: string
+  - name: BRAND_ID
+    data_type: decimal(38,0)
+  - name: DEFECT_REASON
+    data_type: decimal(38,0)
+  - name: INTAKE_DEFECT_DESCRIPTION
+    data_type: decimal(38,0)
+  - name: PRODUCT_CODE
+    data_type: string
+  - name: PRODUCT_LEVEL
+    data_type: string
+  - name: MAX_PRE_APPROVED_PRICE
+    data_type: double
+  - name: SELLING_PRICE
+    data_type: double
+  - name: TICKET_NUMBER
+    data_type: string
+  - name: SUPPLIER_ID
+    data_type: decimal(38,0)
+  - name: RMA_NUMBER
+    data_type: string
+  - name: CASE_CREATED_AT
+    data_type: datetime
+  - name: CASE_UPDATED_AT
+    data_type: datetime
+  - name: CASE_STATUS
+    data_type: string
+  - name: LOGISTIC_STATUS
+    data_type: string
+  - name: DEFECT_DESCRIPTION
+    data_type: string
+  - name: ASSESSMENT_REASON
+    data_type: string
+  - name: RESOLUTION_PREFERENCE_DESCRIPTION
+    data_type: string
+  - name: RESOLUTION_PREFERENCE
+    data_type: boolean
+  - name: ACTUAL_RESOLUTION_DESCRIPTION
+    data_type: string
+  - name: COST_TO_CUSTOMER
+    data_type: double
+  - name: COST_TO_SUPPLIER
+    data_type: double
+  - name: RECEIVABLE_FROM_SUPPLIER
+    data_type: double
+  - name: CASE_RESOLUTION_CREATED_AT
+    data_type: datetime
+  - name: CASE_RESOLUTION_UPDATED_AT
+    data_type: datetime
+  - name: CASE_LOGISTIC_ITEM_FIRST_UPDATED_AT
+    data_type: datetime
+  - name: CASE_LOGISTIC_ITEM_LAST_UPDATED_AT
+    data_type: datetime
+  - name: CASE_ITEM_CREATED_TIMESTAMP
+    data_type: datetime
+  - name: CASE_ITEM_READY_TO_SHIP_TO_SUPPLIER_TIMESTAMP
+    data_type: datetime
+  - name: CASE_ITEM_BACK_FROM_SUPPLIER_TIMESTAMP
+    data_type: datetime
+  - name: CASE_ITEM_READY_TO_RETURN_TO_CUSTOMER_TIMESTAMP
+    data_type: datetime
+  - name: CASE_ITEM_READY_FOR_PICKUP_TIMESTAMP
+    data_type: datetime
+  - name: CASE_ITEM_PICKED_UP_OR_SHIPPED_TIMESTAMP
+    data_type: datetime
+  - name: CASE_OPEN_TIMESTAMP
+    data_type: datetime
+  - name: CASE_CLOSE_TIMESTAMP
+    data_type: datetime
+  - name: LEADTIME_CREATED_READY_FOR_PICK_UP
+    data_type: decimal(9,0)
+  - name: LEADTIME_CREATED_PICKED_OR_SHIPPED
+    data_type: decimal(9,0)
+  - name: LEADTIME_TIME_AT_SUPPLIER
+    data_type: decimal(9,0)
+  - name: LEADTIME_OPEN_CLOSED
+    data_type: decimal(9,0)
+  - name: CUSTOMER_FK
+    data_type: string
+  - name: CASE_CREATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: CASE_UPDATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: CASE_RESOLUTION_UPDATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: BUSINESS_UNIT_FK
+    data_type: string
+  - name: MARKET_FK
+    data_type: string
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_817_MART_SERVICES
+table: FCT_WARRANTY_CASES
