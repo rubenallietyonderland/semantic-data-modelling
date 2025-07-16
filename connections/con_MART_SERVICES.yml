@@ -1,6 +1,6 @@
 unique_name: con_MART_SERVICES
 object_type: connection
 label: con_MART_SERVICES
-as_connection: {{CONNECTION}}
-database: {{DB_NAME}}
+as_connection: snowflake
+database: ACC_LH_817
 schema: MART_SERVICES
