@@ -1,0 +1,53 @@
+unique_name: PRODUCT_CATEGORY_SERVICES
+object_type: dimension
+label: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
+hierarchies:
+  - unique_name: PRODUCT_CATEGORY_SERVICES_dimension Hierarchy
+    label: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Hierarchy
+    levels:
+      - unique_name: PRODUCT_CATEGORY_SERVICES Level
+        secondary_attributes:
+          - unique_name: PRODUCT_CATEGORY_SERVI
+            label: PRODUCT_CATEGORY_SERVICES Secondary Attribute
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_SUB_TYPE_ID
+            name_column: SERVICE_SUB_TYPE_ID
+            sort_column: SERVICE_SUB_TYPE_ID
+          - unique_name: SERVICE_NAME
+            label: SERVICE_NAME
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_NAME
+            name_column: SERVICE_NAME
+          - unique_name: PRODUCT_TYPE_NAME
+            label: PRODUCT_TYPE_NAME
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_TYPE_NAME
+            name_column: PRODUCT_TYPE_NAME
+          - unique_name: PRODUCT_CATEGORY_NAME
+            label: PRODUCT_CATEGORY_NAME
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_CATEGORY_NAME
+            name_column: PRODUCT_CATEGORY_NAME
+level_attributes:
+  - unique_name: PRODUCT_CATEGORY_SERVICES Level
+    label: PRODUCT_CATEGORY_SERVICES Level
+    contains_unique_names: false
+    dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+    is_unique_key: false
+    key_columns:
+      - SERVICE_PRODUCT_CATEGORY_PK
+    name_column: SERVICE_PRODUCT_CATEGORY_PK
+    sort_column: SERVICE_SUB_TYPE_ID
+type: standard

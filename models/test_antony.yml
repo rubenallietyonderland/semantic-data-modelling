@@ -1,0 +1,17 @@
+unique_name: test_antony
+object_type: model
+label: test_antony
+dimensions: []
+metrics:
+  - unique_name: m_FCT_SERVICES_SERVICE_ID_sum
+relationships:
+  - unique_name: >-
+      FCT_SERVICES_SERVICE_PRODUCT_CATEGORY_FK_to_PRODUCT_CATEGORY_SERVICES_PRODUCT_CATEGORY_SERVICES
+      Level
+    from:
+      dataset: FCT_SERVICES
+      join_columns:
+        - SERVICE_PRODUCT_CATEGORY_FK
+    to:
+      dimension: PRODUCT_CATEGORY_SERVICES
+      level: PRODUCT_CATEGORY_SERVICES Level
