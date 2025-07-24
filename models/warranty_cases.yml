@@ -1,7 +1,0 @@
-unique_name: WARRANTY_CASES
-object_type: model
-label: WARRANTY_CASES
-metrics:
-  - unique_name: distinct_count_warranty_cases
-  - unique_name: count_ready_for_pickup
-relationships: []

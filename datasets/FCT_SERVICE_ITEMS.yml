@@ -1,0 +1,88 @@
+unique_name: FCT_SERVICE_ITEMS
+object_type: dataset
+label: FCT_SERVICE_ITEMS
+columns:
+  - name: ITEM_PK
+    data_type: string
+  - name: ORDER_ID
+    data_type: decimal(38,0)
+  - name: ITEM_ID
+    data_type: decimal(38,0)
+  - name: SHI
+    data_type: string
+  - name: BRAND_ID
+    data_type: decimal(38,0)
+  - name: BRAND
+    data_type: string
+  - name: ITEM_CREATED_AT
+    data_type: datetime
+  - name: ITEM_CREATED_BY
+    data_type: decimal(38,0)
+  - name: ITEM_FIRST_UPDATED_AT
+    data_type: datetime
+  - name: ITEM_LAST_UPDATED_AT
+    data_type: datetime
+  - name: ITEM_STATUS_ID
+    data_type: decimal(38,0)
+  - name: ITEM_STATUS_NAME
+    data_type: string
+  - name: ITEM_DRAFT_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_NEW_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_ON_THE_WAY_TO_THE_WAREHOUSE_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_ITEM_ARRIVED_WAREHOUSE_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_SORTING_LOCATION_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_PROCESSING_LOCATION_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_PROCESSED_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_RETURN_UNSUCCESSFUL_ITEM_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_HOLD_BEFORE_SERVICE_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_ITEM_HOLD_AFTER_SERVICE_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_READY_FOR_SHIPMENT_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_ON_THE_WAY_TO_THE_CUSTOMER_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_ON_THE_WAY_TO_THE_STORE_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_READY_FOR_PICKUP_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_PAID_AND_PICKED_TIMESTAMP
+    data_type: datetime
+  - name: ITEM_CANCELED_TIMESTAMP
+    data_type: datetime
+  - name: LEAD_TIME_STATUS_1_2
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_2_14
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_2_11
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_2_15
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_2_12
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_3_4
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_4_7
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_14_15
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_11_12
+    data_type: decimal(9,0)
+  - name: OPEN_LEAD_TIME
+    data_type: decimal(9,0)
+  - name: ORDER_FK
+    data_type: string
+  - name: ITEM_CREATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_438_MART_SERVICES
+table: FCT_SERVICE_ITEMS

@@ -1,0 +1,78 @@
+unique_name: FCT_SERVICE_ORDERS
+object_type: dataset
+label: FCT_SERVICE_ORDERS
+columns:
+  - name: ORDER_PK
+    data_type: string
+  - name: ORDER_ID
+    data_type: decimal(38,0)
+  - name: SHO
+    data_type: string
+  - name: ID_BU
+    data_type: decimal(38,0)
+  - name: BUSINESS_UNIT_ID
+    data_type: decimal(38,0)
+  - name: STORE_ID
+    data_type: decimal(38,0)
+  - name: GROUP_ID
+    data_type: decimal(38,0)
+  - name: FASCIA_ID
+    data_type: decimal(38,0)
+  - name: MARKET_ID
+    data_type: decimal(38,0)
+  - name: ORDER_CREATED_AT
+    data_type: datetime
+  - name: ORDER_CREATED_BY
+    data_type: decimal(38,0)
+  - name: ORDER_FIRST_UPDATED_AT
+    data_type: datetime
+  - name: ORDER_LAST_UPDATED_AT
+    data_type: datetime
+  - name: ORDER_STATUS_ID
+    data_type: decimal(38,0)
+  - name: ORDER_STATUS_NAME
+    data_type: string
+  - name: ORDER_DRAFT_TIMESTAMP
+    data_type: datetime
+  - name: ORDER_NEW_TIMESTAMP
+    data_type: datetime
+  - name: ORDER_BEING_PROCESSED_TIMESTAMP
+    data_type: datetime
+  - name: ORDER_READY_FOR_PICK_UP_TIMESTAMP
+    data_type: datetime
+  - name: ORDER_PAID_AND_PICKED_TIMESTAMP
+    data_type: datetime
+  - name: ORDER_CANCELED_TIMESTAMP
+    data_type: datetime
+  - name: ORDER_READY_FOR_SHIPMENT_TIMESTAMP
+    data_type: datetime
+  - name: ORDER_ON_THE_WAY_TO_THE_CUSTOMER_TIMESTAMP
+    data_type: datetime
+  - name: LEAD_TIME_STATUS_1_2
+    data_type: decimal(18,0)
+  - name: LEAD_TIME_STATUS_2_4
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_2_7
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_2_5
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_2_8
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_4_5
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_7_8
+    data_type: decimal(9,0)
+  - name: OPEN_LEAD_TIME
+    data_type: decimal(9,0)
+  - name: CUSTOMER_FK
+    data_type: string
+  - name: ORDER_CREATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: BUSINESS_UNIT_FK
+    data_type: string
+  - name: MARKET_FK
+    data_type: string
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_438_MART_SERVICES
+table: FCT_SERVICE_ORDERS

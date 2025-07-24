@@ -1,0 +1,122 @@
+unique_name: FCT_SERVICES
+object_type: dataset
+label: FCT_SERVICES
+columns:
+  - name: SERVICE_ITEM_PK
+    data_type: string
+  - name: SERVICE_ITEM_ID
+    data_type: decimal(38,0)
+  - name: SERVICE_ID
+    data_type: decimal(38,0)
+  - name: ACTIVE
+    data_type: boolean
+  - name: ITEM_ID
+    data_type: decimal(38,0)
+  - name: LOCATION_ID
+    data_type: decimal(38,0)
+  - name: QUANTITY
+    data_type: decimal(38,0)
+  - name: SERVICE_SUB_TYPE_ID
+    data_type: decimal(38,0)
+  - name: SERVICE_CREATED_AT
+    data_type: datetime
+  - name: SERVICE_CREATED_BY
+    data_type: decimal(38,0)
+  - name: SERVICE_FIRST_UPDATED_AT
+    data_type: datetime
+  - name: SERVICE_LAST_UPDATED_AT
+    data_type: datetime
+  - name: SERVICE_ARRIVED_WAREHOUSE_UPDATED_BY
+    data_type: decimal(38,0)
+  - name: SKU_ID
+    data_type: decimal(38,0)
+  - name: PRICING
+    data_type: double
+  - name: PROMISED_LEAD_TIME
+    data_type: double
+  - name: FLAG_MULTIPLESERVICES
+    data_type: string
+  - name: NUMBER_OF_LOCATIONS
+    data_type: decimal(18,0)
+  - name: GROUPEDSERVICES
+    data_type: decimal(18,0)
+  - name: MULTIPLESERVICE_DESCRIPTION
+    data_type: string
+  - name: SERVICE_STATUS_ID
+    data_type: decimal(38,0)
+  - name: SERVICE_STATUS_NAME
+    data_type: string
+  - name: ASSERVICE_NEW_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_IN_SHIPMENT_BEFORE_SERVICE_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_ARRIVED_WAREHOUSE_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_BEING_PROCESSED_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_HOLD_BEFORE_SERVICE_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_PROCESSED_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_HOLD_AFTER_SERVICE_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_RETURN_UNSUCCESSFUL_ITEM_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_READY_FOR_PICKUP_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_PAID_AND_PICKED_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_CANCELED_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_DRAFT_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_ON_THE_WAY_TO_THE_STORE_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_READY_FOR_SHIPMENT_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_ON_THE_WAY_TO_THE_CUSTOMER_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_ARRIVED_IN_LOCATION_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_HQ_ASSESSMENT_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_READY_TO_SHIP_TO_SUPPLIER_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_AT_EXTERNAL_SUPPLIER_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_NOT_ACCEPTED_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_ACCEPTED_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_ON_HOLD_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_WAITING_FOR_APPROVAL_TIMESTAMP
+    data_type: datetime
+  - name: SERVICE_SENT_EXTERNAL_TIMESTAMP
+    data_type: datetime
+  - name: LEAD_TIME_STATUS_1_6
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_13_4
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_4_6
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_1_21
+    data_type: decimal(9,0)
+  - name: LEAD_TIME_STATUS_24_21
+    data_type: decimal(9,0)
+  - name: OPEN_LEAD_TIME
+    data_type: decimal(9,0)
+  - name: ITEM_FK
+    data_type: string
+  - name: LOCATION_FK
+    data_type: string
+  - name: SERVICE_PRODUCT_CATEGORY_FK
+    data_type: string
+  - name: SERVICE_CREATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: SERVICE_ARRIVED_WAREHOUSE_UPDATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_438_MART_SERVICES
+table: FCT_SERVICES

@@ -1,0 +1,152 @@
+unique_name: PRODUCT_CATEGORY_dimension
+object_type: dimension
+label: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
+hierarchies:
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Hierarchy
+    label: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Hierarchy
+    filter_empty: 'no'
+    levels:
+      - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_Level
+        secondary_attributes:
+          - unique_name: SERVICE_SUB_TYPE_ID
+            label: SERVICE_SUB_TYPE_ID
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_SUB_TYPE_ID
+            name_column: SERVICE_SUB_TYPE_ID
+          - unique_name: SERVICE_SUB_TYPE_NAME
+            label: SERVICE_SUB_TYPE_NAME
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_SUB_TYPE_NAME
+            name_column: SERVICE_SUB_TYPE_NAME
+          - unique_name: SERVICE_SUB_TYPE_CREATED_AT
+            label: SERVICE_SUB_TYPE_CREATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_aggregatable: false
+            is_unique_key: false
+            key_columns:
+              - SERVICE_SUB_TYPE_CREATED_AT
+            name_column: SERVICE_SUB_TYPE_CREATED_AT
+          - unique_name: SERVICE_SUB_TYPE_UPDATED_AT
+            label: SERVICE_SUB_TYPE_UPDATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_aggregatable: false
+            is_unique_key: false
+            key_columns:
+              - SERVICE_SUB_TYPE_UPDATED_AT
+            name_column: SERVICE_SUB_TYPE_UPDATED_AT
+          - unique_name: SERVICE_TYPE_ID
+            label: SERVICE_TYPE_ID
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_TYPE_ID
+            name_column: SERVICE_TYPE_ID
+          - unique_name: SERVICE_NAME
+            label: SERVICE_NAME
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_NAME
+            name_column: SERVICE_NAME
+          - unique_name: SERVICE_CREATED_AT
+            label: SERVICE_CREATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_CREATED_AT
+            name_column: SERVICE_CREATED_AT
+          - unique_name: SERVICE_UPDATED_AT
+            label: SERVICE_UPDATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_UPDATED_AT
+            name_column: SERVICE_UPDATED_AT
+          - unique_name: PRODUCT_TYPE_ID
+            label: PRODUCT_TYPE_ID
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_TYPE_ID
+            name_column: PRODUCT_TYPE_ID
+          - unique_name: PRODUCT_TYPE_NAME
+            label: PRODUCT_TYPE_NAME
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_TYPE_NAME
+            name_column: PRODUCT_TYPE_NAME
+          - unique_name: PRODUCT_TYPE_CREATED_AT
+            label: PRODUCT_TYPE_CREATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_TYPE_CREATED_AT
+            name_column: PRODUCT_TYPE_CREATED_AT
+          - unique_name: PRODUCT_TYPE_UPDATED_AT
+            label: PRODUCT_TYPE_UPDATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_TYPE_UPDATED_AT
+            name_column: PRODUCT_TYPE_UPDATED_AT
+          - unique_name: PRODUCT_CATEGORY_ID
+            label: PRODUCT_CATEGORY_ID
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_CATEGORY_ID
+            name_column: PRODUCT_CATEGORY_ID
+          - unique_name: PRODUCT_CATEGORY_NAME
+            label: PRODUCT_CATEGORY_NAME
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_CATEGORY_NAME
+            name_column: PRODUCT_CATEGORY_NAME
+          - unique_name: PRODUCT_CATEGORY_CREATED_AT
+            label: PRODUCT_CATEGORY_CREATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_CATEGORY_CREATED_AT
+            name_column: PRODUCT_CATEGORY_CREATED_AT
+          - unique_name: PRODUCT_CATEGORY_UPDATED_AT
+            label: PRODUCT_CATEGORY_UPDATED_AT
+            contains_unique_names: false
+            dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+            is_unique_key: false
+            key_columns:
+              - PRODUCT_CATEGORY_UPDATED_AT
+            name_column: PRODUCT_CATEGORY_UPDATED_AT
+level_attributes:
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_Level
+    label: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Level
+    contains_unique_names: false
+    dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+    is_aggregatable: false
+    is_unique_key: true
+    key_columns:
+      - SERVICE_PRODUCT_CATEGORY_PK
+    name_column: SERVICE_PRODUCT_CATEGORY_PK
+    sort_column: SERVICE_SUB_TYPE_ID
+type: standard
