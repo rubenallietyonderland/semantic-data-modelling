@@ -1,6 +1,0 @@
-unique_name: con_ACC_LH_438_MART_SERVICES
-object_type: connection
-label: con_ACC_LH_438_MART_SERVICES
-as_connection: snowflake
-database: ACC_LH_438
-schema: MART_SERVICES

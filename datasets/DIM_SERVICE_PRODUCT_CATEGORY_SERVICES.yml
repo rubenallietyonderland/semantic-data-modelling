@@ -38,5 +38,5 @@ columns:
     data_type: datetime
   - name: MART_LOAD_TIMESTAMP
     data_type: datetime
-connection_id: con_ACC_LH_438_MART_SERVICES
+connection_id: con_MART_SERVICES
 table: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES

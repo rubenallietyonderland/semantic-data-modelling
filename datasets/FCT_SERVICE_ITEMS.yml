@@ -84,5 +84,5 @@ columns:
     data_type: string
   - name: MART_LOAD_TIMESTAMP
     data_type: datetime
-connection_id: con_ACC_LH_438_MART_SERVICES
+connection_id: con_MART_SERVICES
 table: FCT_SERVICE_ITEMS
