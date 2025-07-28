@@ -1,0 +1,6 @@
+unique_name: m_order_id_count
+object_type: metric
+label: Count Order_ID
+calculation_method: count distinct
+column: ORDER_ID
+dataset: VW_SERVICE_ORDERS_COMPLETE

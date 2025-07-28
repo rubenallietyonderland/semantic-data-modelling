@@ -1,0 +1,15 @@
+unique_name: Services
+object_type: model
+label: Services
+dimensions: []
+metrics:
+  - unique_name: m_order_id_count
+relationships:
+  - unique_name: R_PRODUCT_CATEGORY_SERVICES
+    from:
+      dataset: VW_SERVICE_ORDERS_COMPLETE
+      join_columns:
+        - SERVICE_PRODUCT_CATEGORY_FK
+    to:
+      dimension: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
+      level: L_DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
