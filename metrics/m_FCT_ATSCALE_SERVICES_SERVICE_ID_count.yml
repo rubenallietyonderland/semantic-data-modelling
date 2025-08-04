@@ -1,0 +1,6 @@
+unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
+object_type: metric
+label: Count Services
+calculation_method: count distinct
+column: SERVICE_ID
+dataset: FCT_ATSCALE_SERVICES

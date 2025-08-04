@@ -1,6 +1,0 @@
-unique_name: m_FCT_SERVICES_SERVICE_ID_count
-object_type: metric
-label: count_services
-calculation_method: estimated count distinct
-column: SERVICE_ID
-dataset: FCT_SERVICES

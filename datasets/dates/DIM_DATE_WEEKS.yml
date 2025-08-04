@@ -1,0 +1,28 @@
+unique_name: DIM_DATE_WEEKS
+object_type: dataset
+label: DIM_DATE_WEEKS
+columns:
+  - name: YEAR_WEEK_ID
+    data_type: decimal(8,0)
+  - name: WEEK_START_DATE
+    data_type: date
+  - name: RETAIL_YEAR
+    data_type: decimal(4,0)
+  - name: RETAIL_QUARTER
+    data_type: decimal(1,0)
+  - name: RETAIL_PERIOD
+    data_type: decimal(2,0)
+  - name: RETAIL_WEEK_NUMBER
+    data_type: decimal(2,0)
+  - name: YEAR_WEEK_PREVIOUS_YEAR_ID
+    data_type: decimal(8,0)
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: INTERMEDIATE_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: OPS_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_438_MART_DATES
+table: DIM_DATE_WEEKS

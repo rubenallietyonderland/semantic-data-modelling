@@ -1,0 +1,6 @@
+unique_name: con_MART_ORGANISATIONS
+object_type: connection
+label: con_ACC_LH_438_MART_ORGANISATIONS
+as_connection: {{CONNECTION}}
+database: {{DB_NAME}}
+schema: MART_ORGANISATIONS

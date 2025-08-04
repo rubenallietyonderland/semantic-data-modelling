@@ -1,0 +1,28 @@
+unique_name: DIM_CUSTOMERS_dimension
+object_type: dimension
+label: Customers
+hierarchies:
+  - unique_name: DIM_CUSTOMERS_dimension Hierarchy
+    label: Customer Hierarchy
+    levels:
+      - unique_name: DIM_CUSTOMERS_uuid
+      - unique_name: DIM_CUSTOMERS_id
+level_attributes:
+  - unique_name: DIM_CUSTOMERS_id
+    label: Customer Id
+    contains_unique_names: false
+    dataset: DIM_CUSTOMERS
+    is_unique_key: false
+    key_columns:
+      - CUSTOMER_PK
+    name_column: CUSTOMER_ID
+    sort_column: CUSTOMER_ID
+  - unique_name: DIM_CUSTOMERS_uuid
+    label: Customer uuid
+    contains_unique_names: false
+    dataset: DIM_CUSTOMERS
+    is_unique_key: false
+    key_columns:
+      - UUID
+    name_column: UUID
+type: standard

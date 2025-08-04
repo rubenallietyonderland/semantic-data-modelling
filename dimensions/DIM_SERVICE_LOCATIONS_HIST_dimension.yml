@@ -1,6 +1,0 @@
-unique_name: DIM_SERVICE_LOCATIONS_HIST_dimension
-object_type: dimension
-label: DIM_SERVICE_LOCATIONS_HIST_dimension
-hierarchies: []
-level_attributes: []
-type: standard

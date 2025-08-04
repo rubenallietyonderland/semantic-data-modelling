@@ -1,0 +1,114 @@
+unique_name: DIM_SHOPS
+object_type: dataset
+label: DIM_SHOPS
+columns:
+  - name: SHOP_PK
+    data_type: string
+  - name: MARKET_FK
+    data_type: string
+  - name: BUSINESS_UNIT_FK
+    data_type: string
+  - name: SHOP_ID
+    data_type: decimal(38,0)
+  - name: SHOP_CODE
+    data_type: string
+  - name: SHOP_NAME
+    data_type: string
+  - name: SHOP_TYPE
+    data_type: string
+  - name: SHOP_CODE_SHOP_NAME
+    data_type: string
+  - name: PARENT_SHOP_ID
+    data_type: decimal(38,0)
+  - name: SHOP_PRICING_ID
+    data_type: decimal(38,0)
+  - name: BRANCH
+    data_type: string
+  - name: BRANCH_DESCRIPTION
+    data_type: string
+  - name: LIKE_FOR_LIKE
+    data_type: string
+  - name: SALES_FLOOR_SIZE
+    data_type: decimal(1,0)
+  - name: TOTAL_FLOOR_SIZE
+    data_type: decimal(1,0)
+  - name: CLUSTER
+    data_type: string
+  - name: DISTRICT
+    data_type: string
+  - name: AREA
+    data_type: decimal(38,0)
+  - name: LEGAL_ENTITY
+    data_type: string
+  - name: COUNTRY_ID
+    data_type: decimal(38,0)
+  - name: POSTAL_CODE
+    data_type: string
+  - name: LOCATION
+    data_type: string
+  - name: OPENING_DATE
+    data_type: datetime
+  - name: CLOSING_DATE
+    data_type: datetime
+  - name: REOPENING_DATE
+    data_type: datetime
+  - name: IS_DIRECT_SALES
+    data_type: boolean
+  - name: IS_SHOP
+    data_type: boolean
+  - name: IS_TEST_SHOP
+    data_type: boolean
+  - name: IS_REPORTING_SHOP
+    data_type: boolean
+  - name: IS_ACTIVE
+    data_type: boolean
+  - name: IS_ACTIVE_WAREHOUSE
+    data_type: boolean
+  - name: IS_SHOWN_ON_WEB
+    data_type: boolean
+  - name: IS_B2B
+    data_type: boolean
+  - name: URL
+    data_type: string
+  - name: GEO_LATITUDE
+    data_type: string
+  - name: GEO_LONGITUDE
+    data_type: string
+  - name: EXPLORE_MORE_REGION_CODE
+    data_type: decimal(38,0)
+  - name: CHANNEL_SPLIT
+    data_type: string
+  - name: OPEN_HOURS_MON_FROM
+    data_type: string
+  - name: OPEN_HOURS_MON_TO
+    data_type: string
+  - name: OPEN_HOURS_TUE_FROM
+    data_type: string
+  - name: OPEN_HOURS_TUE_TO
+    data_type: string
+  - name: OPEN_HOURS_WED_FROM
+    data_type: string
+  - name: OPEN_HOURS_WED_TO
+    data_type: string
+  - name: OPEN_HOURS_THU_FROM
+    data_type: string
+  - name: OPEN_HOURS_THU_TO
+    data_type: string
+  - name: OPEN_HOURS_FRI_FROM
+    data_type: string
+  - name: OPEN_HOURS_FRI_TO
+    data_type: string
+  - name: OPEN_HOURS_SAT_FROM
+    data_type: string
+  - name: OPEN_HOURS_SAT_TO
+    data_type: string
+  - name: OPEN_HOURS_SUN_FROM
+    data_type: string
+  - name: OPEN_HOURS_SUN_TO
+    data_type: string
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_MART_SHOPS
+table: DIM_SHOPS

@@ -1,0 +1,58 @@
+unique_name: DIM_DATES_dimension
+object_type: dimension
+label: Dates
+hierarchies:
+  - unique_name: DIM_DATES_dimension Hierarchy
+    label: Date Hierarchy
+    levels:
+      - unique_name: DIM_DATES_dimension_week_number
+      - unique_name: DIM_DATES_dimension_year_week_id
+      - unique_name: DIM_DATES_dimension_calender_day
+      - unique_name: DIM_DATES_id
+level_attributes:
+  - unique_name: DIM_DATES_id
+    label: Date Id
+    contains_unique_names: false
+    dataset: DIM_DATES
+    is_unique_key: false
+    key_columns:
+      - DATE_ID
+    name_column: DATE_ID
+    time_unit: day
+  - unique_name: DIM_DATES_dimension_year_week_id
+    label: Year Week Id
+    contains_unique_names: false
+    dataset: DIM_DATE_WEEKS
+    is_unique_key: false
+    key_columns:
+      - YEAR_WEEK_ID
+    name_column: YEAR_WEEK_ID
+    time_unit: week
+  - unique_name: DIM_DATES_dimension_week_number
+    label: Week Number
+    contains_unique_names: false
+    dataset: DIM_DATE_WEEKS
+    is_unique_key: false
+    key_columns:
+      - RETAIL_WEEK_NUMBER
+    name_column: RETAIL_WEEK_NUMBER
+    time_unit: week
+  - unique_name: DIM_DATES_dimension_calender_day
+    label: Calender Day
+    contains_unique_names: false
+    dataset: DIM_DATES
+    is_unique_key: false
+    key_columns:
+      - CALENDAR_DATE
+    name_column: CALENDAR_DATE
+    sort_column: CALENDAR_DATE
+    time_unit: day
+relationships:
+  - from:
+      dataset: DIM_DATES
+      join_columns:
+        - YEAR_WEEK_ID
+    to:
+      level: DIM_DATES_dimension_year_week_id
+    type: snowflake
+type: time

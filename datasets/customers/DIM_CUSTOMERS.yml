@@ -1,0 +1,38 @@
+unique_name: DIM_CUSTOMERS
+object_type: dataset
+label: DIM_CUSTOMERS
+columns:
+  - name: CUSTOMER_PK
+    data_type: string
+  - name: MARKET_FK
+    data_type: string
+  - name: BUSINESS_UNIT_FK
+    data_type: string
+  - name: CUSTOMER_ID
+    data_type: decimal(38,0)
+  - name: UUID
+    data_type: string
+  - name: DATE_OF_BIRTH
+    data_type: date
+  - name: GENDER
+    data_type: string
+  - name: CARD_NUMBER
+    data_type: string
+  - name: CLASSIFICATION
+    data_type: string
+  - name: LANGUAGE
+    data_type: string
+  - name: ACCOUNT_MANAGER
+    data_type: string
+  - name: ON_ACCOUNT
+    data_type: boolean
+  - name: CREATED_AT
+    data_type: datetime
+  - name: CREATED_BY
+    data_type: string
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_MART_CUSTOMERS
+table: DIM_CUSTOMERS

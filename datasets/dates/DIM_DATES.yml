@@ -1,13 +1,7 @@
-unique_name: DIM_OPS_DATES
+unique_name: DIM_DATES
 object_type: dataset
-label: DIM_OPS_DATES
+label: DIM_DATES
 columns:
-  - name: DATE_PK
-    data_type: string
-  - name: YEAR_MONTH_FK
-    data_type: string
-  - name: YEAR_WEEK_FK
-    data_type: string
   - name: DATE_ID
     data_type: decimal(11,0)
   - name: YEAR_MONTH_ID
@@ -38,7 +32,11 @@ columns:
     data_type: decimal(1,0)
   - name: UPDATED_AT
     data_type: datetime
+  - name: INTERMEDIATE_LOAD_TIMESTAMP
+    data_type: datetime
   - name: OPS_LOAD_TIMESTAMP
     data_type: datetime
-connection_id: con_OPS_DATES
-table: DIM_OPS_DATES
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_438_MART_DATES
+table: DIM_DATES

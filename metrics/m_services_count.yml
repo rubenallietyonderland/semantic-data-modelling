@@ -1,0 +1,6 @@
+unique_name: m_services_count
+object_type: metric
+label: services count
+calculation_method: count distinct
+column: SERVICE_ITEM_ID
+dataset: FCT_SERVICES

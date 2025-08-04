@@ -1,6 +1,0 @@
-unique_name: m_FCT_SERVICES_SERVICE_ID_sum
-object_type: metric
-label: M Fct Services
-calculation_method: sum
-column: SERVICE_ID
-dataset: FCT_SERVICES
