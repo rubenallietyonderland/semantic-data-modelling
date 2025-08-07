@@ -10,7 +10,6 @@ hierarchies:
   - unique_name: Item Hiearchy
     label: Item Hiearchy
     levels:
-      - unique_name: Item_lt_product_cat
       - unique_name: MAPPING_SERVICES_BIG_TABLE_item_status_name
       - unique_name: MAPPING_SERVICES_BIG_TABLE_Item_id
   - unique_name: Service Hierarchy
@@ -76,13 +75,5 @@ level_attributes:
     key_columns:
       - ORDER_STATUS_NAME
     name_column: ORDER_STATUS_NAME
-  - unique_name: Item_lt_product_cat
-    label: LT Product Cat
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - LT_PRODUCT_CAT
-    name_column: LT_PRODUCT_CAT
 relationships: []
 type: standard
