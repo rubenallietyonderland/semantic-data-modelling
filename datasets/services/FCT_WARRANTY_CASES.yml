@@ -90,8 +90,6 @@ columns:
     data_type: decimal(9,0)
   - name: LEADTIME_TIME_AT_SUPPLIER
     data_type: decimal(9,0)
-  - name: LEADTIME_OPEN_CLOSED
-    data_type: decimal(9,0)
   - name: CUSTOMER_FK
     data_type: string
   - name: CASE_CREATED_BY_EMPLOYEE_FK
@@ -113,5 +111,74 @@ columns:
           WHEN "FCT_WARRANTY_CASES"."LOGISTIC_STATUS" = 'ready-for-pickup' THEN 1
           ELSE 0
         END
-connection_id: con_MART_SERVICES
+  - name: '#WarrantyCases'
+    data_type: decimal(18,0)
+    sql: COUNT(CASE_ID)
+  - name: EAN_CODE
+    data_type: string
+  - name: INTERNAL_PURCHASE
+    data_type: boolean
+  - name: DATE_OF_PURCHASE
+    data_type: datetime
+  - name: PURCHASE_COST
+    data_type: double
+  - name: SELL_PRICE
+    data_type: double
+  - name: SUPPLIER_CODE
+    data_type: string
+  - name: SUPPLIER_COLOR
+    data_type: string
+  - name: SUPPLIER_SIZE
+    data_type: string
+  - name: SUPPLIER_PRODUCT_DESCRIPTION
+    data_type: string
+  - name: PROOF_OF_PURCHASE
+    data_type: boolean
+  - name: LONG_PROCEDURE_AVAILABLE
+    data_type: boolean
+  - name: CLOSE_ON_SHORT_RESOLUTION
+    data_type: boolean
+  - name: RESOLUTION_SKU
+    data_type: decimal(38,0)
+  - name: VOUCHER_ID
+    data_type: string
+  - name: VOUCHER_VALUE
+    data_type: double
+  - name: REPAIR_COST
+    data_type: double
+  - name: SHORT_PROCEDURE
+    data_type: boolean
+  - name: ASSESSMENT_ELIGIBILITY
+    data_type: string
+  - name: CASE_ACCOUNTING_ID
+    data_type: decimal(38,0)
+  - name: CREDIT_NOTE_NUMBER
+    data_type: string
+  - name: CREDIT_NOTE_AMOUNT
+    data_type: double
+  - name: INVOICE_NUMBER
+    data_type: string
+  - name: INVOICE_AMOUNT
+    data_type: double
+  - name: INVOICE_DATE
+    data_type: date
+  - name: CASE_ACCOUNTING_STATUS
+    data_type: string
+  - name: SUPPLIER_SOLUTION
+    data_type: string
+  - name: ACCOUNTING_LABEL
+    data_type: string
+  - name: TRANSPORTATION_COST
+    data_type: double
+  - name: ACCOUNTING_LIST_STATUS
+    data_type: string
+  - name: CASE_ACCOUNTING_OPEN_TIMESTAMP
+    data_type: datetime
+  - name: CASE_ACCOUNTING_CLOSE_TIMESTAMP
+    data_type: datetime
+  - name: LEADTIME_CASE_OPEN_CLOSED
+    data_type: decimal(9,0)
+  - name: LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED
+    data_type: decimal(9,0)
+connection_id: con_LAKEHOUSE_PRD_MART_SERVICES
 table: FCT_WARRANTY_CASES
