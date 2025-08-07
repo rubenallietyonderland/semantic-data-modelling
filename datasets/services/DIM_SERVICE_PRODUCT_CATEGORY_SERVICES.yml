@@ -1,0 +1,42 @@
+unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+object_type: dataset
+label: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+columns:
+  - name: SERVICE_PRODUCT_CATEGORY_PK
+    data_type: string
+  - name: SERVICE_SUB_TYPE_ID
+    data_type: decimal(38,0)
+  - name: SERVICE_SUB_TYPE_NAME
+    data_type: string
+  - name: SERVICE_SUB_TYPE_CREATED_AT
+    data_type: string
+  - name: SERVICE_SUB_TYPE_UPDATED_AT
+    data_type: string
+  - name: SERVICE_TYPE_ID
+    data_type: decimal(38,0)
+  - name: SERVICE_NAME
+    data_type: string
+  - name: SERVICE_CREATED_AT
+    data_type: string
+  - name: SERVICE_UPDATED_AT
+    data_type: string
+  - name: PRODUCT_TYPE_ID
+    data_type: decimal(38,0)
+  - name: PRODUCT_TYPE_NAME
+    data_type: string
+  - name: PRODUCT_TYPE_CREATED_AT
+    data_type: string
+  - name: PRODUCT_TYPE_UPDATED_AT
+    data_type: string
+  - name: PRODUCT_CATEGORY_ID
+    data_type: decimal(38,0)
+  - name: PRODUCT_CATEGORY_NAME
+    data_type: string
+  - name: PRODUCT_CATEGORY_CREATED_AT
+    data_type: string
+  - name: PRODUCT_CATEGORY_UPDATED_AT
+    data_type: string
+  - name: MART_LOAD_TIMESTAMP
+    data_type: string
+connection_id: con_MART_SERVICES
+table: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES

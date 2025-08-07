@@ -1,0 +1,20 @@
+unique_name: DIM_MARKETS
+object_type: dataset
+label: DIM_MARKETS
+columns:
+  - name: MARKET_PK
+    data_type: string
+  - name: MARKET_ID
+    data_type: decimal(38,0)
+  - name: MARKET_CODE
+    data_type: string
+  - name: MARKET_NAME
+    data_type: string
+  - name: UPDATED_AT
+    data_type: date
+  - name: INTERMEDIATE_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_MART_ORGANISATIONS
+table: DIM_MARKETS

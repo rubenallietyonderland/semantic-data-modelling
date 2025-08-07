@@ -1,0 +1,26 @@
+unique_name: DIM_DATE_MONTHS
+object_type: dataset
+label: DIM_DATE_MONTHS
+columns:
+  - name: YEAR_MONTH_ID
+    data_type: long
+  - name: MONTH_START_DATE
+    data_type: date
+  - name: YEAR
+    data_type: long
+  - name: QUARTER
+    data_type: long
+  - name: MONTH
+    data_type: long
+  - name: MONTH_NAME
+    data_type: string
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: INTERMEDIATE_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: OPS_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_438_MART_DATES
+table: DIM_DATE_MONTHS

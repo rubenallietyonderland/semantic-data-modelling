@@ -1,0 +1,16 @@
+unique_name: MAPPING_ORDERS
+object_type: dataset
+label: MAPPING_ORDERS
+columns:
+  - name: ORDER_PK
+    data_type: string
+  - name: ORDER_STATUS_NAME
+    data_type: string
+  - name: ORDER_ID
+    data_type: decimal(38,0)
+  - name: ORDER_CREATED_AT
+    data_type: datetime
+connection_id: con_MART_SERVICES
+sql: |-
+  SELECT ORDER_PK, ORDER_ID, ORDER_STATUS_NAME, ORDER_CREATED_AT
+  FROM ACC_LH_817.MART_SERVICES.FCT_SERVICE_ORDERS

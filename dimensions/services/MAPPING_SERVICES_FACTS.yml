@@ -1,0 +1,99 @@
+unique_name: MAPPING_SERVICES_FACTS
+object_type: dimension
+label: MAPPING_SERVICES_FACTS
+hierarchies:
+  - unique_name: MAPPING_ORDERS_FACTS Hierarchy
+    label: MAPPING_ORDERS_FACTS Hierarchy
+    levels:
+      - unique_name: MAPPING_SERVICES_FACTS_order_status_name
+      - unique_name: MAPPING_SERVICES_FACTS_order_id
+        secondary_attributes:
+          - unique_name: MAPPING_SERVICES_FACTS_order_created_at
+            label: Order Created At
+            contains_unique_names: false
+            dataset: FCT_SERVICE_ORDERS
+            is_unique_key: false
+            key_columns:
+              - ORDER_CREATED_AT
+            name_column: ORDER_CREATED_AT
+      - unique_name: MAPPING_ORDERS_FACTS_item_status
+      - unique_name: MAPPING_SERVICES_FACTS_item_id
+      - unique_name: MAPPING_ORDERS_FACTS_service_status
+      - unique_name: MAPPING_SERVICES_FACTS_service_id
+  - unique_name: MAPPING_SERVICES_FACTS Hierarchy
+    label: Test Hierarchy
+    levels:
+      - unique_name: MAPPING_SERVICES_FACTS Hierarchy Level
+level_attributes:
+  - unique_name: MAPPING_SERVICES_FACTS_order_id
+    label: Order ID
+    contains_unique_names: false
+    dataset: MAPPING_ORDERS
+    is_unique_key: false
+    key_columns:
+      - ORDER_PK
+    name_column: ORDER_ID
+  - unique_name: MAPPING_SERVICES_FACTS_order_status_name
+    label: Order Status
+    contains_unique_names: false
+    dataset: MAPPING_ORDERS
+    is_unique_key: false
+    key_columns:
+      - ORDER_STATUS_NAME
+    name_column: ORDER_STATUS_NAME
+  - unique_name: MAPPING_SERVICES_FACTS_item_id
+    label: Item Id
+    contains_unique_names: false
+    dataset: MAPPING_ITEMS
+    is_unique_key: false
+    key_columns:
+      - ITEM_PK
+    name_column: ITEM_ID
+  - unique_name: MAPPING_ORDERS_FACTS_item_status
+    label: Item Status
+    contains_unique_names: false
+    dataset: MAPPING_ITEMS
+    is_unique_key: false
+    key_columns:
+      - ITEM_STATUS_NAME
+    name_column: ITEM_STATUS_NAME
+  - unique_name: MAPPING_SERVICES_FACTS_service_id
+    label: Service Id
+    contains_unique_names: false
+    dataset: MAPPING_SERVICE
+    is_unique_key: false
+    key_columns:
+      - SERVICE_ITEM_PK
+    name_column: SERVICE_ITEM_ID
+  - unique_name: MAPPING_ORDERS_FACTS_service_status
+    label: Service Status
+    contains_unique_names: false
+    dataset: MAPPING_SERVICE
+    is_unique_key: false
+    key_columns:
+      - SERVICE_STATUS_NAME
+    name_column: SERVICE_STATUS_NAME
+  - unique_name: MAPPING_SERVICES_FACTS Hierarchy Level
+    label: MAPPING_SERVICES_FACTS Hierarchy Level
+    contains_unique_names: false
+    dataset: MAPPING_SERVICE
+    is_unique_key: false
+    key_columns:
+      - LOCATION_FK
+    name_column: LOCATION_FK
+relationships:
+  - from:
+      dataset: MAPPING_ITEMS
+      join_columns:
+        - ORDER_FK
+    to:
+      level: MAPPING_SERVICES_FACTS_order_id
+    type: snowflake
+  - from:
+      dataset: MAPPING_SERVICE
+      join_columns:
+        - ITEM_FK
+    to:
+      level: MAPPING_SERVICES_FACTS_item_id
+    type: snowflake
+type: standard

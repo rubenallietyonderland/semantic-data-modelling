@@ -1,0 +1,96 @@
+unique_name: DIM_DATES_dimension
+object_type: dimension
+label: Dates
+hierarchies:
+  - unique_name: DIM_DATES_dimension Hierarchy
+    label: Date Hierarchy
+    levels:
+      - unique_name: DIM_DATES_dimension_year
+      - unique_name: DIM_DATES_dimension_month
+      - unique_name: DIM_DATES_dimension_year_month_id
+      - unique_name: DIM_DATES_dimension_week_number
+      - unique_name: DIM_DATES_dimension_year_week_id
+      - unique_name: DIM_DATES_dimension_calender_day
+      - unique_name: DIM_DATES_id
+level_attributes:
+  - unique_name: DIM_DATES_id
+    label: Date Id
+    contains_unique_names: false
+    dataset: DIM_DATES
+    is_unique_key: false
+    key_columns:
+      - DATE_ID
+    name_column: DATE_ID
+    time_unit: day
+  - unique_name: DIM_DATES_dimension_year_week_id
+    label: Year Week Id
+    contains_unique_names: false
+    dataset: DIM_DATE_WEEKS
+    is_unique_key: false
+    key_columns:
+      - YEAR_WEEK_ID
+    name_column: YEAR_WEEK_ID
+    time_unit: week
+  - unique_name: DIM_DATES_dimension_week_number
+    label: Week Number
+    contains_unique_names: false
+    dataset: DIM_DATE_WEEKS
+    is_unique_key: false
+    key_columns:
+      - RETAIL_WEEK_NUMBER
+    name_column: RETAIL_WEEK_NUMBER
+    time_unit: week
+  - unique_name: DIM_DATES_dimension_calender_day
+    label: Calender Day
+    contains_unique_names: false
+    dataset: DIM_DATES
+    is_unique_key: false
+    key_columns:
+      - CALENDAR_DATE
+    name_column: CALENDAR_DATE
+    sort_column: CALENDAR_DATE
+    time_unit: day
+  - unique_name: DIM_DATES_dimension_month
+    label: Month
+    contains_unique_names: false
+    dataset: DIM_DATE_MONTHS
+    is_unique_key: false
+    key_columns:
+      - MONTH
+    name_column: MONTH
+    sort_column: MONTH
+    time_unit: month
+  - unique_name: DIM_DATES_dimension_year
+    label: Year
+    contains_unique_names: false
+    dataset: DIM_DATE_MONTHS
+    is_unique_key: false
+    key_columns:
+      - YEAR
+    name_column: YEAR
+    time_unit: year
+  - unique_name: DIM_DATES_dimension_year_month_id
+    label: Year Month Id
+    contains_unique_names: false
+    dataset: DIM_DATE_MONTHS
+    is_unique_key: false
+    key_columns:
+      - YEAR_MONTH_ID
+    name_column: YEAR_MONTH_ID
+    time_unit: month
+relationships:
+  - from:
+      dataset: DIM_DATES
+      join_columns:
+        - YEAR_WEEK_ID
+    to:
+      level: DIM_DATES_dimension_year_week_id
+    type: snowflake
+  - from:
+      dataset: DIM_DATE_WEEKS
+      join_columns:
+        - YEAR_MONTH_ID
+    to:
+      level: DIM_DATES_dimension_year_month_id
+    type: snowflake
+type: time

@@ -1,0 +1,6 @@
+unique_name: m_FCT_ATSCALE_SERVICES_ITEM_ID_count
+object_type: metric
+label: Count Items
+calculation_method: count distinct
+column: ITEM_ID
+dataset: FCT_ATSCALE_SERVICES

@@ -1,6 +1,0 @@
-unique_name: count_ready_for_pickup
-object_type: metric_calc
-label: Ready for Pickup Case
-expression: Sum([WARRANTY_CASES].[ready_for_pickup_flag])
-is_hidden: false
-mdx_aggregate_function: SUM

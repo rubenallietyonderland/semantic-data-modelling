@@ -1,0 +1,39 @@
+unique_name: MAPPING_SERVICE
+object_type: dataset
+label: MAPPING_SERVICE
+columns:
+  - name: ITEM_FK
+    data_type: string
+  - name: SERVICE_ITEM_ID
+    data_type: decimal(38,0)
+  - name: SERVICE_ID
+    data_type: decimal(38,0)
+  - name: PRICING
+    data_type: double
+  - name: PROMISED_LEAD_TIME
+    data_type: double
+  - name: FLAG_MULTIPLESERVICES
+    data_type: string
+  - name: NUMBER_OF_LOCATIONS
+    data_type: decimal(18,0)
+  - name: MULTIPLESERVICE_DESCRIPTION
+    data_type: string
+  - name: SERVICE_STATUS_NAME
+    data_type: string
+  - name: SERVICE_ITEM_PK
+    data_type: string
+  - name: SERVICE_CREATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: SERVICE_ARRIVED_WAREHOUSE_UPDATED_BY_EMPLOYEE_FK
+    data_type: string
+  - name: LOCATION_FK
+    data_type: string
+connection_id: con_MART_SERVICES
+sql: >-
+  SELECT SERVICE_ITEM_PK,  ITEM_FK, SERVICE_ITEM_ID, SERVICE_ID, PRICING,
+  PROMISED_LEAD_TIME, FLAG_MULTIPLESERVICES, NUMBER_OF_LOCATIONS,
+  MULTIPLESERVICE_DESCRIPTION, SERVICE_STATUS_NAME,
+  SERVICE_CREATED_BY_EMPLOYEE_FK,
+  SERVICE_ARRIVED_WAREHOUSE_UPDATED_BY_EMPLOYEE_FK, LOCATION_FK
+
+  FROM ACC_LH_817.MART_SERVICES.FCT_SERVICES

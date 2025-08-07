@@ -1,0 +1,105 @@
+unique_name: Services_one_big_model
+object_type: model
+label: Service one big model
+dimensions: []
+metrics:
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_count
+    folder: Measures
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_ID_count
+    folder: Measures
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
+    folder: Measures
+  - unique_name: c_count_orders_last-year
+    folder: Measures
+  - unique_name: test
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_avg
+    folder: Measures
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_sum
+relationships:
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - BUSINESS_UNIT_FK
+    to:
+      dimension: DIM_BUSINESS_UNITS_dimension
+      level: DIM_BUSINESS_UNITS_id
+  - unique_name: FCT_ATSCALE_SERVICES_MARKET_FK_to_DIM_MARKETS_dimension_DIM_MARKETS_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - MARKET_FK
+    to:
+      dimension: DIM_MARKETS_dimension
+      level: DIM_MARKETS_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_CREATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_CREATED_BY_EMPLOYEE_FK
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
+  - unique_name: FCT_ATSCALE_SERVICES_ORDER_DATE_ID_to_DIM_DATES_dimension_DIM_DATES_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_DATE_ID
+    to:
+      dimension: DIM_DATES_dimension
+      level: DIM_DATES_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_CUSTOMER_FK_to_DIM_CUSTOMERS_dimension_DIM_CUSTOMERS_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - CUSTOMER_FK
+    to:
+      dimension: DIM_CUSTOMERS_dimension
+      level: DIM_CUSTOMERS_id
+  - unique_name: FCT_ATSCALE_SERVICES_SHOP_FK_to_DIM_SHOPS_dimension_DIM_SHOPS_shop_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - SHOP_FK
+    to:
+      dimension: DIM_SHOPS_dimension
+      level: DIM_SHOPS_shop_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_LOCATION_FK_to_DIM_SERVICE_LOCATIONS_HIST_dimension_DIM_SERVICE_LOCATIONS_HIST_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - LOCATION_FK
+    to:
+      dimension: DIM_SERVICE_LOCATIONS_HIST_dimension
+      level: DIM_SERVICE_LOCATIONS_HIST_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_SERVICE_ITEM_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_service_item_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - SERVICE_ITEM_PK
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_service_item_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ITEM_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_Item_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ITEM_PK
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_Item_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_order_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_PK
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_order_id
