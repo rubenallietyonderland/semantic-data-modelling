@@ -1,0 +1,6 @@
+unique_name: m_services_latest_create_date
+object_type: metric
+label: Latest Create Date
+calculation_method: maximum
+column: ORDER_CREATED_AT
+dataset: FCT_ATSCALE_SERVICES
