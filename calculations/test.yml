@@ -1,0 +1,19 @@
+unique_name: test
+object_type: metric_calc
+label: test
+expression: >-
+  CASE WHEN [DIM_DATES_dimension].[DIM_DATES_dimension
+  Hierarchy].CurrentMember.LEVEL_NUMBER = 1  THEN 
+
+  NULL 
+
+  ELSE 
+
+  IIF(ISEMPTY([Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count]), NULL,
+  (ParallelPeriod([DIM_DATES_dimension].[DIM_DATES_dimension
+  Hierarchy].[DIM_DATES_dimension_year], 1,
+  [DIM_DATES_dimension].[DIM_DATES_dimension Hierarchy].CurrentMember),
+  [Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count]))
+
+  END
+is_hidden: false

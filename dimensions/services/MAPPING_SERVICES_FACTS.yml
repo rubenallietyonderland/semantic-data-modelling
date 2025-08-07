@@ -20,6 +20,10 @@ hierarchies:
       - unique_name: MAPPING_SERVICES_FACTS_item_id
       - unique_name: MAPPING_ORDERS_FACTS_service_status
       - unique_name: MAPPING_SERVICES_FACTS_service_id
+  - unique_name: MAPPING_SERVICES_FACTS Hierarchy
+    label: Test Hierarchy
+    levels:
+      - unique_name: MAPPING_SERVICES_FACTS Hierarchy Level
 level_attributes:
   - unique_name: MAPPING_SERVICES_FACTS_order_id
     label: Order ID
@@ -69,6 +73,14 @@ level_attributes:
     key_columns:
       - SERVICE_STATUS_NAME
     name_column: SERVICE_STATUS_NAME
+  - unique_name: MAPPING_SERVICES_FACTS Hierarchy Level
+    label: MAPPING_SERVICES_FACTS Hierarchy Level
+    contains_unique_names: false
+    dataset: MAPPING_SERVICE
+    is_unique_key: false
+    key_columns:
+      - LOCATION_FK
+    name_column: LOCATION_FK
 relationships:
   - from:
       dataset: MAPPING_ITEMS

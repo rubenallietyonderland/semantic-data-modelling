@@ -5,6 +5,9 @@ hierarchies:
   - unique_name: DIM_DATES_dimension Hierarchy
     label: Date Hierarchy
     levels:
+      - unique_name: DIM_DATES_dimension_year
+      - unique_name: DIM_DATES_dimension_month
+      - unique_name: DIM_DATES_dimension_year_month_id
       - unique_name: DIM_DATES_dimension_week_number
       - unique_name: DIM_DATES_dimension_year_week_id
       - unique_name: DIM_DATES_dimension_calender_day
@@ -47,6 +50,34 @@ level_attributes:
     name_column: CALENDAR_DATE
     sort_column: CALENDAR_DATE
     time_unit: day
+  - unique_name: DIM_DATES_dimension_month
+    label: Month
+    contains_unique_names: false
+    dataset: DIM_DATE_MONTHS
+    is_unique_key: false
+    key_columns:
+      - MONTH
+    name_column: MONTH
+    sort_column: MONTH
+    time_unit: month
+  - unique_name: DIM_DATES_dimension_year
+    label: Year
+    contains_unique_names: false
+    dataset: DIM_DATE_MONTHS
+    is_unique_key: false
+    key_columns:
+      - YEAR
+    name_column: YEAR
+    time_unit: year
+  - unique_name: DIM_DATES_dimension_year_month_id
+    label: Year Month Id
+    contains_unique_names: false
+    dataset: DIM_DATE_MONTHS
+    is_unique_key: false
+    key_columns:
+      - YEAR_MONTH_ID
+    name_column: YEAR_MONTH_ID
+    time_unit: month
 relationships:
   - from:
       dataset: DIM_DATES
@@ -54,5 +85,12 @@ relationships:
         - YEAR_WEEK_ID
     to:
       level: DIM_DATES_dimension_year_week_id
+    type: snowflake
+  - from:
+      dataset: DIM_DATE_WEEKS
+      join_columns:
+        - YEAR_MONTH_ID
+    to:
+      level: DIM_DATES_dimension_year_month_id
     type: snowflake
 type: time

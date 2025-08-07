@@ -1,0 +1,6 @@
+unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_sum
+object_type: metric
+label: Order ID TEST
+calculation_method: sum
+column: ORDER_ID
+dataset: FCT_ATSCALE_SERVICES

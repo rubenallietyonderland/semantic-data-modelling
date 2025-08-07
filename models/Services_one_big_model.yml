@@ -1,6 +1,6 @@
 unique_name: Services_one_big_model
 object_type: model
-label: Services_one_big_model
+label: Service one big model
 dimensions: []
 metrics:
   - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_count
@@ -9,6 +9,12 @@ metrics:
     folder: Measures
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
     folder: Measures
+  - unique_name: c_count_orders_last-year
+    folder: Measures
+  - unique_name: test
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_avg
+    folder: Measures
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_sum
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
@@ -70,3 +76,30 @@ relationships:
     to:
       dimension: DIM_SERVICE_LOCATIONS_HIST_dimension
       level: DIM_SERVICE_LOCATIONS_HIST_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_SERVICE_ITEM_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_service_item_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - SERVICE_ITEM_PK
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_service_item_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ITEM_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_Item_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ITEM_PK
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_Item_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_order_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_PK
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_order_id

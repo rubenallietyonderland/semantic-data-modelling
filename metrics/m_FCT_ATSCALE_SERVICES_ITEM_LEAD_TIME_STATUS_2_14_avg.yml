@@ -1,0 +1,6 @@
+unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_avg
+object_type: metric
+label: Avg - New - Ready-for-pick-up
+calculation_method: average
+column: ITEM_LEAD_TIME_STATUS_2_14
+dataset: FCT_ATSCALE_SERVICES

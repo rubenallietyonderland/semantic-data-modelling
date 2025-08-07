@@ -3,19 +3,21 @@ object_type: dataset
 label: DIM_DATE_WEEKS
 columns:
   - name: YEAR_WEEK_ID
-    data_type: decimal(8,0)
+    data_type: long
+  - name: YEAR_MONTH_ID
+    data_type: long
   - name: WEEK_START_DATE
     data_type: date
   - name: RETAIL_YEAR
-    data_type: decimal(4,0)
+    data_type: long
   - name: RETAIL_QUARTER
-    data_type: decimal(1,0)
+    data_type: long
   - name: RETAIL_PERIOD
-    data_type: decimal(2,0)
+    data_type: long
   - name: RETAIL_WEEK_NUMBER
-    data_type: decimal(2,0)
+    data_type: long
   - name: YEAR_WEEK_PREVIOUS_YEAR_ID
-    data_type: decimal(8,0)
+    data_type: long
   - name: UPDATED_AT
     data_type: datetime
   - name: INTERMEDIATE_LOAD_TIMESTAMP
