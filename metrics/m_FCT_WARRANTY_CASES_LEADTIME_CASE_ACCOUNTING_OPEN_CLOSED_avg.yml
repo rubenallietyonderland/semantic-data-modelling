@@ -1,0 +1,6 @@
+unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED_avg
+object_type: metric
+label: M Average Lead Time Case Accounting Open Closed
+calculation_method: average
+column: LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED
+dataset: FCT_WARRANTY_CASES

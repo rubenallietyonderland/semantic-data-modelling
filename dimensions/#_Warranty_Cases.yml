@@ -1,0 +1,18 @@
+unique_name: '#_Warranty_Cases'
+object_type: dimension
+label: '# Warranty Cases'
+hierarchies:
+  - unique_name: '#_Warranty_Cases_Hierarchy'
+    label: '# Warranty Cases Hierarchy'
+    levels:
+      - unique_name: '#_Warranty_Cases_Level'
+is_degenerate: true
+level_attributes:
+  - unique_name: '#_Warranty_Cases_Level'
+    label: '# Warranty Cases Level'
+    contains_unique_names: false
+    dataset: FCT_WARRANTY_CASES
+    key_columns:
+      - '#WarrantyCases'
+    name_column: '#WarrantyCases'
+type: standard

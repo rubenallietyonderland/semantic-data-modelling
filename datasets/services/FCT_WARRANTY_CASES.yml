@@ -8,8 +8,8 @@ columns:
     data_type: decimal(38,0)
   - name: BUSINESS_UNIT_ID
     data_type: decimal(38,0)
-  - name: SHOP_ID
-    data_type: decimal(38,0)
+  - name: SHOP_FK
+    data_type: string
   - name: MARKET_ID
     data_type: decimal(38,0)
   - name: SKU_ID
@@ -37,7 +37,7 @@ columns:
   - name: RMA_NUMBER
     data_type: string
   - name: CASE_CREATED_AT
-    data_type: datetime
+    data_type: long
   - name: CASE_UPDATED_AT
     data_type: datetime
   - name: CASE_STATUS

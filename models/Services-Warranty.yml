@@ -1,8 +1,12 @@
 unique_name: Services-Warranty
 object_type: model
 label: Services-Warranty
+dimensions: []
 metrics:
   - unique_name: m_warranty_count
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED_avg
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
+  - unique_name: m_FCT_WARRANTY_CASES_LOGISTIC_CREATED_PICKED_SHIPPED_avg
 relationships:
   - unique_name: FCT_WARRANTY_CASES_MARKET_FK_to_DIM_MARKETS_dimension_DIM_MARKETS_id
     from:
@@ -37,3 +41,11 @@ relationships:
     to:
       dimension: DIM_DATES_dimension
       level: DIM_DATES_id
+  - unique_name: FCT_WARRANTY_CASES_SHOP_FK_to_DIM_SHOPS_dimension_DIM_SHOPS_shop_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - SHOP_FK
+    to:
+      dimension: DIM_SHOPS_dimension
+      level: DIM_SHOPS_shop_id
