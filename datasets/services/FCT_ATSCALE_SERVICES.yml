@@ -23,7 +23,7 @@ columns:
   - name: ORDER_CREATED_AT
     data_type: datetime
   - name: ORDER_DATE_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: ORDER_CREATED_BY
     data_type: decimal(38,0)
   - name: ORDER_FIRST_UPDATED_AT
