@@ -104,16 +104,6 @@ columns:
     data_type: string
   - name: MART_LOAD_TIMESTAMP
     data_type: datetime
-  - name: ready_for_pickup_flag
-    data_type: decimal(1,0)
-    sql: |-
-      CASE
-          WHEN "FCT_WARRANTY_CASES"."LOGISTIC_STATUS" = 'ready-for-pickup' THEN 1
-          ELSE 0
-        END
-  - name: '#WarrantyCases'
-    data_type: decimal(18,0)
-    sql: COUNT(CASE_ID)
   - name: EAN_CODE
     data_type: string
   - name: INTERNAL_PURCHASE

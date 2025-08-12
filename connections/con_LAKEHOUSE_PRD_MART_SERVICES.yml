@@ -1,6 +1,6 @@
 unique_name: con_LAKEHOUSE_PRD_MART_SERVICES
 object_type: connection
 label: con_LAKEHOUSE_PRD_MART_SERVICES
-as_connection: snowflake
-database: LAKEHOUSE_PRD
+as_connection: {{CONNECTION}}
+database: {{DB_NAME}}
 schema: MART_SERVICES

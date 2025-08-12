@@ -3,10 +3,10 @@ object_type: model
 label: Services-Warranty
 dimensions: []
 metrics:
-  - unique_name: m_warranty_count
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED_avg
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
   - unique_name: m_FCT_WARRANTY_CASES_LOGISTIC_CREATED_PICKED_SHIPPED_avg
+  - unique_name: m_warranty_cases_count
 relationships:
   - unique_name: FCT_WARRANTY_CASES_MARKET_FK_to_DIM_MARKETS_dimension_DIM_MARKETS_id
     from:
@@ -49,3 +49,33 @@ relationships:
     to:
       dimension: DIM_SHOPS_dimension
       level: DIM_SHOPS_shop_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_CREATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_CREATED_BY_EMPLOYEE_FK
+    role_play: Created {0}
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_UPDATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_UPDATED_BY_EMPLOYEE_FK
+    role_play: Updated {0}
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_RESOLUTION_UPDATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_RESOLUTION_UPDATED_BY_EMPLOYEE_FK
+    role_play: Resolution updated {0}
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
