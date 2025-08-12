@@ -1,0 +1,54 @@
+unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
+object_type: dimension
+label: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
+hierarchies:
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Hierarchy
+    label: Product Category Services Hierarchy
+    levels:
+      - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_product_category
+      - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_product_type
+      - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_service_name
+      - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_product_sub_type
+      - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Level
+level_attributes:
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Level
+    label: Service Subtype Id
+    contains_unique_names: false
+    dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+    is_unique_key: false
+    key_columns:
+      - SERVICE_PRODUCT_CATEGORY_PK
+    name_column: SERVICE_SUB_TYPE_ID
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_product_sub_type
+    label: Product Sub Type
+    contains_unique_names: false
+    dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+    is_unique_key: false
+    key_columns:
+      - SERVICE_SUB_TYPE_NAME
+    name_column: SERVICE_SUB_TYPE_NAME
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_service_name
+    label: Service Name
+    contains_unique_names: false
+    dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+    is_unique_key: false
+    key_columns:
+      - SERVICE_NAME
+    name_column: SERVICE_NAME
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_product_type
+    label: Product Type
+    contains_unique_names: false
+    dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+    is_unique_key: false
+    key_columns:
+      - PRODUCT_TYPE_NAME
+    name_column: PRODUCT_TYPE_NAME
+  - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_product_category
+    label: Product Category
+    contains_unique_names: false
+    dataset: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+    is_unique_key: false
+    key_columns:
+      - PRODUCT_CATEGORY_NAME
+    name_column: PRODUCT_CATEGORY_NAME
+type: standard

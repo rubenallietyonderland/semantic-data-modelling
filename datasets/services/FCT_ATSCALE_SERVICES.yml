@@ -114,6 +114,8 @@ columns:
     data_type: datetime
   - name: ITEM_PROCESSED_TIMESTAMP
     data_type: datetime
+  - name: ITEM_PROCESSED_DATE_ID
+    data_type: long
   - name: ITEM_RETURN_UNSUCCESSFUL_ITEM_TIMESTAMP
     data_type: datetime
   - name: ITEM_HOLD_BEFORE_SERVICE_TIMESTAMP
