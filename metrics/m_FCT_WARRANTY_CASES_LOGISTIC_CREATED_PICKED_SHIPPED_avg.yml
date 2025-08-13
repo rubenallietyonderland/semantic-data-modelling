@@ -1,6 +1,6 @@
 unique_name: m_FCT_WARRANTY_CASES_LOGISTIC_CREATED_PICKED_SHIPPED_avg
 object_type: metric
-label: M Fct Warranty Cases Log Is Tic Created Picked Ship Ped Average
+label: Avg Logistic Created-PickedUp Or Shipped Leadtime
 calculation_method: average
-column: 'LEADTIME_CREATED_PICKED_OR_SHIPPED'
-dataset: 'FCT_WARRANTY_CASES'
+column: LEADTIME_CREATED_PICKED_OR_SHIPPED
+dataset: FCT_WARRANTY_CASES

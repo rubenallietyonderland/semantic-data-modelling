@@ -10,6 +10,8 @@ metrics:
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
   - unique_name: m_FCT_WARRANTY_CASES_LOGISTIC_CREATED_PICKED_SHIPPED_avg
   - unique_name: m_warranty_cases_count
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_TIME_AT_SUPPLIER_avg
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CREATED_READY_FOR_PICK_UP_avg
 relationships:
   - unique_name: FCT_WARRANTY_CASES_MARKET_FK_to_DIM_MARKETS_dimension_DIM_MARKETS_id
     from:
