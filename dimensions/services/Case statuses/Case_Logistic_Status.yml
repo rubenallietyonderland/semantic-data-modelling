@@ -1,6 +1,6 @@
 unique_name: Case_Logistic_Status
 object_type: dimension
-label: Case_Logistic_Status
+label: Case Logistic Status
 hierarchies:
   - unique_name: Logistic_Status_Hierarchy
     label: Logistic_Status Hierarchy

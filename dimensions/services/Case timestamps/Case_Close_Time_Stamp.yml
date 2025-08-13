@@ -1,0 +1,18 @@
+unique_name: Case_Close_Time_Stamp
+object_type: dimension
+label: Case Close Timestamp
+hierarchies:
+  - unique_name: Case_Close_Time_Stamp_Hierarchy
+    label: Case Close Time Stamp Hierarchy
+    levels:
+      - unique_name: Case_Close_Time_Stamp_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Case_Close_Time_Stamp_Level
+    label: Case Close Time Stamp Level
+    contains_unique_names: false
+    dataset: FCT_WARRANTY_CASES
+    key_columns:
+      - CASE_CLOSE_TIMESTAMP
+    name_column: CASE_CLOSE_TIMESTAMP
+type: standard
