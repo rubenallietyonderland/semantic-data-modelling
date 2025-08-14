@@ -39,6 +39,7 @@ hierarchies:
             label: Short Procedure
             contains_unique_names: false
             dataset: FCT_WARRANTY_CASES
+            folder: Other
             is_unique_key: false
             key_columns:
               - SHORT_PROCEDURE
@@ -61,6 +62,15 @@ hierarchies:
             key_columns:
               - CASE_CLOSE_TIMESTAMP
             name_column: CASE_CLOSE_TIMESTAMP
+          - unique_name: Label
+            label: Label
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Other
+            is_unique_key: false
+            key_columns:
+              - LABEL
+            name_column: LABEL
 level_attributes:
   - unique_name: CASE_PK
     label: CASE_PK
