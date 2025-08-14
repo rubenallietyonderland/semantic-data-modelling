@@ -87,10 +87,11 @@ relationships:
     to:
       dimension: DIM_EMPLOYEES_dimension
       level: DIM_EMPLOYEES_id
-  - unique_name: FCT_WARRANTY_CASES_MAPPING_empty_dimension
+  - unique_name: FCT_WARRANTY_CASES_CASE_PK_to_MAPPING_WARRANTY_CASES_CASE_PK
     from:
-      dataset: FCT_WARRANTY_CASES_MAPPING
-      join_columns: []
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_PK
     to:
-      dimension: ''
-      level: ''
+      dimension: MAPPING_WARRANTY_CASES
+      level: CASE_PK
