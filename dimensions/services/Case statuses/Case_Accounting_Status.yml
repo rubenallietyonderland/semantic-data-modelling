@@ -4,6 +4,7 @@ label: Case Accounting Status
 hierarchies:
   - unique_name: Case_Accounting_Status_Hierarchy
     label: Case Accounting Status Hierarchy
+    folder: Case statuses
     levels:
       - unique_name: Case_Accounting_Status_Level
 is_degenerate: true

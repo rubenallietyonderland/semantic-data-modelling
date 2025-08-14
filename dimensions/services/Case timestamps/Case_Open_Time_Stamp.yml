@@ -1,6 +1,6 @@
 unique_name: Case_Open_Time_Stamp
 object_type: dimension
-label: Case Open Timestamp
+label: Case Open Time Stamp
 hierarchies:
   - unique_name: Case_Open_Time_Stamp_Hierarchy
     label: Case Open Time Stamp Hierarchy

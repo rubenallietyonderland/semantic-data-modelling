@@ -7,6 +7,7 @@ dimensions:
   - Case_Logistic_Status
   - Case_Open_Time_Stamp
   - Case_Close_Time_Stamp
+  - Short_Procedure
 metrics:
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED_avg
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
@@ -86,3 +87,10 @@ relationships:
     to:
       dimension: DIM_EMPLOYEES_dimension
       level: DIM_EMPLOYEES_id
+  - unique_name: FCT_WARRANTY_CASES_MAPPING_empty_dimension
+    from:
+      dataset: FCT_WARRANTY_CASES_MAPPING
+      join_columns: []
+    to:
+      dimension: ''
+      level: ''
