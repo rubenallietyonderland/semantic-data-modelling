@@ -5,10 +5,7 @@ dimensions: []
 metrics:
   - unique_name: m_orders_count
     folder: Measures
-  - unique_name: m_item_count
-    folder: Measures
-  - unique_name: m_services_count
-    folder: Measures
+  - unique_name: test
 relationships:
   - unique_name: FCT_SERVICE_ORDERS_SHOP_FK_to_DIM_SHOPS_dimension_DIM_SHOPS_shop_type
     from:
@@ -69,30 +66,11 @@ relationships:
     to:
       dimension: MAPPING_SERVICES_FACTS
       level: MAPPING_SERVICES_FACTS_order_id
-  - unique_name: >-
-      FCT_SERVICE_ITEMS_ITEM_PK_to_MAPPING_SERVICES_FACTS_MAPPING_SERVICES_FACTS_item_id
+  - unique_name: FCT_SERVICE_ORDERS_ORDER_DATE_ID_to_date_test_dim_date
     from:
-      dataset: FCT_SERVICE_ITEMS
+      dataset: FCT_SERVICE_ORDERS
       join_columns:
-        - ITEM_PK
+        - ORDER_DATE_ID
     to:
-      dimension: MAPPING_SERVICES_FACTS
-      level: MAPPING_SERVICES_FACTS_item_id
-  - unique_name: >-
-      FCT_SERVICES_SERVICE_ITEM_PK_to_MAPPING_SERVICES_FACTS_MAPPING_SERVICES_FACTS_service_id
-    from:
-      dataset: FCT_SERVICES
-      join_columns:
-        - SERVICE_ITEM_PK
-    to:
-      dimension: MAPPING_SERVICES_FACTS
-      level: MAPPING_SERVICES_FACTS_service_id
-  - unique_name: >-
-      FCT_SERVICES_LOCATION_FK_to_DIM_SERVICE_LOCATIONS_HIST_dimension_DIM_SERVICE_LOCATIONS_HIST_id
-    from:
-      dataset: FCT_SERVICES
-      join_columns:
-        - LOCATION_FK
-    to:
-      dimension: DIM_SERVICE_LOCATIONS_HIST_dimension
-      level: DIM_SERVICE_LOCATIONS_HIST_id
+      dimension: date_test_dim
+      level: date

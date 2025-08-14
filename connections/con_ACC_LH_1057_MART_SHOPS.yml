@@ -1,0 +1,6 @@
+unique_name: con_ACC_LH_1057_MART_SHOPS
+object_type: connection
+label: con_ACC_LH_1057_MART_SHOPS
+as_connection: snowflake
+database: ACC_LH_1057
+schema: MART_SHOPS

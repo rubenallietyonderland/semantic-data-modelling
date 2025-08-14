@@ -1,0 +1,79 @@
+unique_name: date_test
+object_type: dataset
+label: date_test
+columns:
+  - name: date_day
+    data_type: date
+  - name: pk_date
+    data_type: datetime
+  - name: datekey
+    data_type: long
+  - name: date_name
+    data_type: string
+  - name: year
+    data_type: string
+  - name: year_name
+    data_type: string
+  - name: half_year
+    data_type: date
+  - name: half_year_name
+    data_type: string
+  - name: quarter
+    data_type: date
+  - name: quarter_name
+    data_type: string
+  - name: month
+    data_type: date
+  - name: month_name
+    data_type: string
+  - name: week
+    data_type: date
+  - name: week_name
+    data_type: string
+  - name: day_of_year
+    data_type: decimal(4,0)
+  - name: day_of_year_name
+    data_type: string
+  - name: day_of_week
+    data_type: decimal(2,0)
+  - name: day_of_week_name
+    data_type: string
+  - name: week_of_year
+    data_type: decimal(2,0)
+  - name: week_of_year_name
+    data_type: string
+  - name: month_of_year
+    data_type: decimal(2,0)
+  - name: month_of_year_name
+    data_type: string
+  - name: quarter_of_year
+    data_type: decimal(2,0)
+  - name: quarter_of_year_name
+    data_type: string
+connection_id: con_ACC_LH_1057_MART_SHOPS
+sql: |2
+    SELECT dateadd(day,seq,dt::date) as "date_day",
+                  "date_day"::TIMESTAMP as "pk_date",
+                  cast(to_char("date_day", '%Y%m%d') as decimal) as "datekey",
+                  to_char("date_day", '%A, %B %d, %Y') as "date_name",
+                  CAST(EXTRACT(YEAR from "date_day") AS STRING) as "year",
+                  concat('Calendar ',to_char("date_day", '%Y')) as "year_name",
+                  IFF(EXTRACT(QUARTER FROM "date_day") < 3, DATE_TRUNC('year', "date_day"), DATEADD('quarter', 2, DATE_TRUNC('year', "date_day"))) as "half_year",
+                  IFF(EXTRACT(QUARTER FROM "date_day") < 3, concat('Semester 1, ',to_char("date_day", '%Y')), concat('Semester 2, ', to_char("date_day", '%Y')))as "half_year_name",
+                  DATE_TRUNC('quarter', "date_day") as "quarter",
+                  concat('Quarter ', EXTRACT(QUARTER from "date_day"), ', ', EXTRACT(YEAR from "date_day")) as "quarter_name",
+                  DATE_TRUNC('month', "date_day") as "month",
+                  to_char("date_day", '%B %Y') as "month_name",
+                  DATE_TRUNC('week', "date_day") as "week",
+                  concat('Week ', EXTRACT(WEEK from "date_day"), to_char("date_day", ', %Y')) as "week_name",
+                  EXTRACT(DAYOFYEAR from "date_day") as "day_of_year",
+                  concat('Day ', EXTRACT(DAYOFYEAR from "date_day")) as "day_of_year_name",
+                  EXTRACT(DAYOFWEEK from "date_day") as "day_of_week",
+                  DAYNAME("date_day") as "day_of_week_name",
+                  EXTRACT(WEEK from "date_day") as "week_of_year",
+                  concat('Week ', EXTRACT(WEEK from "date_day")) as "week_of_year_name",
+                  EXTRACT(MONTH from "date_day") as "month_of_year",
+                  MONTHNAME("date_day") as "month_of_year_name",
+                  EXTRACT(QUARTER from "date_day") as "quarter_of_year",
+                  concat('Quarter ', EXTRACT(QUARTER from "date_day")) as "quarter_of_year_name"
+                  FROM (select seq4() as seq,  dateadd(month, 1, '2024-04-01'::date) dt from table(generator(rowcount => 1000)))

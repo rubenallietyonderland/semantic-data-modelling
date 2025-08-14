@@ -1,0 +1,18 @@
+unique_name: Order_Date_ID
+object_type: dimension
+label: Order Date ID
+hierarchies:
+  - unique_name: Order_Date_ID_Hierarchy
+    label: Order Date ID Hierarchy
+    levels:
+      - unique_name: Order_Date_ID_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Order_Date_ID_Level
+    label: Order Date ID Level
+    contains_unique_names: false
+    dataset: FCT_SERVICE_ORDERS
+    key_columns:
+      - ORDER_DATE_ID
+    name_column: ORDER_DATE_ID
+type: standard

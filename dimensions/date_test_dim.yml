@@ -1,0 +1,39 @@
+unique_name: date_test_dim
+object_type: dimension
+label: date_test_dim
+hierarchies:
+  - unique_name: date_test_dim Hierarchy
+    label: date_test_dim Hierarchy
+    levels:
+      - unique_name: year
+      - unique_name: month
+      - unique_name: date
+level_attributes:
+  - unique_name: year
+    label: year
+    contains_unique_names: false
+    dataset: date_test
+    is_unique_key: false
+    key_columns:
+      - year
+    name_column: year
+    time_unit: year
+  - unique_name: month
+    label: month
+    contains_unique_names: false
+    dataset: date_test
+    is_unique_key: false
+    key_columns:
+      - month
+    name_column: month_name
+    time_unit: month
+  - unique_name: date
+    label: Date
+    contains_unique_names: false
+    dataset: date_test
+    is_unique_key: false
+    key_columns:
+      - datekey
+    name_column: date_day
+    time_unit: day
+type: time
