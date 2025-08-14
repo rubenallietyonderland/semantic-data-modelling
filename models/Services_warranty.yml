@@ -1,13 +1,7 @@
-unique_name: Services-Warranty
+unique_name: Services_warranty
 object_type: model
-label: Services-Warranty
-dimensions:
-  - Case_Accounting_Status
-  - Case_Status
-  - Case_Logistic_Status
-  - Case_Open_Time_Stamp
-  - Case_Close_Time_Stamp
-  - Short_Procedure
+label: Services_warranty
+dimensions: []
 metrics:
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED_avg
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
