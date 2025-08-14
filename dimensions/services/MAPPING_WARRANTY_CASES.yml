@@ -35,6 +35,32 @@ hierarchies:
             key_columns:
               - LOGISTIC_STATUS
             name_column: LOGISTIC_STATUS
+          - unique_name: Short Procedure
+            label: Short Procedure
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            is_unique_key: false
+            key_columns:
+              - SHORT_PROCEDURE
+            name_column: SHORT_PROCEDURE
+          - unique_name: Case Open Timestamp
+            label: Case Open Timestamp
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case timestamps
+            is_unique_key: false
+            key_columns:
+              - CASE_OPEN_TIMESTAMP
+            name_column: CASE_OPEN_TIMESTAMP
+          - unique_name: Case Close Timestamp
+            label: Case Close Timestamp
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case timestamps
+            is_unique_key: false
+            key_columns:
+              - CASE_CLOSE_TIMESTAMP
+            name_column: CASE_CLOSE_TIMESTAMP
 level_attributes:
   - unique_name: CASE_PK
     label: CASE_PK
