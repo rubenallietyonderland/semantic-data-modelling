@@ -5,18 +5,10 @@ hierarchies:
   - unique_name: DIM_BRANDS_dimension Hierarchy
     label: DIM_BRANDS_dimension Hierarchy
     levels:
-      - unique_name: DIM_BRANDS_code
       - unique_name: DIM_BRANDS_name
       - unique_name: DIM_BRANDS_brand_id
+        is_hidden: true
 level_attributes:
-  - unique_name: DIM_BRANDS_code
-    label: DIM_BRANDS_code
-    contains_unique_names: false
-    dataset: DIM_BRANDS
-    is_unique_key: false
-    key_columns:
-      - BRAND_CODE
-    name_column: BRAND_CODE
   - unique_name: DIM_BRANDS_name
     label: DIM_BRANDS_name
     contains_unique_names: false
