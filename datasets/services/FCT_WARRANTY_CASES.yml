@@ -16,8 +16,8 @@ columns:
     data_type: string
   - name: LABEL
     data_type: string
-  - name: BRAND_ID
-    data_type: decimal(38,0)
+  - name: BRAND_FK
+    data_type: string
   - name: DEFECT_REASON
     data_type: decimal(38,0)
   - name: INTAKE_DEFECT_DESCRIPTION

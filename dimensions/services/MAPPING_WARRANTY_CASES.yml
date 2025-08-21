@@ -80,4 +80,5 @@ level_attributes:
     key_columns:
       - CASE_PK
     name_column: CASE_PK
+relationships: []
 type: standard
