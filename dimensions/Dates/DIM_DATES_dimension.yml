@@ -6,6 +6,7 @@ hierarchies:
     label: Date Hierarchy
     levels:
       - unique_name: DIM_DATES_dimension_year
+      - unique_name: DIM_DATES_dimension_quarter
       - unique_name: DIM_DATES_dimension_month
       - unique_name: DIM_DATES_dimension_year_month_id
       - unique_name: DIM_DATES_dimension_week_number
@@ -78,6 +79,14 @@ level_attributes:
       - YEAR_MONTH_ID
     name_column: YEAR_MONTH_ID
     time_unit: month
+  - unique_name: DIM_DATES_dimension_quarter
+    label: Quarter
+    contains_unique_names: false
+    dataset: DIM_DATE_MONTHS
+    key_columns:
+      - QUARTER
+    name_column: QUARTER
+    time_unit: quarter
 relationships:
   - from:
       dataset: DIM_DATES

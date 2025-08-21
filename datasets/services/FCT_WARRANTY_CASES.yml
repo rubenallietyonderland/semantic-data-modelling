@@ -8,16 +8,16 @@ columns:
     data_type: decimal(38,0)
   - name: BUSINESS_UNIT_ID
     data_type: decimal(38,0)
-  - name: SHOP_ID
-    data_type: decimal(38,0)
+  - name: SHOP_FK
+    data_type: string
   - name: MARKET_ID
     data_type: decimal(38,0)
   - name: SKU_ID
     data_type: string
   - name: LABEL
     data_type: string
-  - name: BRAND_ID
-    data_type: decimal(38,0)
+  - name: BRAND_FK
+    data_type: string
   - name: DEFECT_REASON
     data_type: decimal(38,0)
   - name: INTAKE_DEFECT_DESCRIPTION
@@ -90,8 +90,6 @@ columns:
     data_type: decimal(9,0)
   - name: LEADTIME_TIME_AT_SUPPLIER
     data_type: decimal(9,0)
-  - name: LEADTIME_OPEN_CLOSED
-    data_type: decimal(9,0)
   - name: CUSTOMER_FK
     data_type: string
   - name: CASE_CREATED_BY_EMPLOYEE_FK
@@ -106,12 +104,117 @@ columns:
     data_type: string
   - name: MART_LOAD_TIMESTAMP
     data_type: datetime
+  - name: EAN_CODE
+    data_type: string
+  - name: INTERNAL_PURCHASE
+    data_type: boolean
+  - name: DATE_OF_PURCHASE
+    data_type: datetime
+  - name: PURCHASE_COST
+    data_type: double
+  - name: SELL_PRICE
+    data_type: double
+  - name: SUPPLIER_CODE
+    data_type: string
+  - name: SUPPLIER_COLOR
+    data_type: string
+  - name: SUPPLIER_SIZE
+    data_type: string
+  - name: SUPPLIER_PRODUCT_DESCRIPTION
+    data_type: string
+  - name: PROOF_OF_PURCHASE
+    data_type: boolean
+  - name: LONG_PROCEDURE_AVAILABLE
+    data_type: boolean
+  - name: CLOSE_ON_SHORT_RESOLUTION
+    data_type: boolean
+  - name: RESOLUTION_SKU
+    data_type: decimal(38,0)
+  - name: VOUCHER_VALUE
+    data_type: double
+  - name: REPAIR_COST
+    data_type: double
+  - name: SHORT_PROCEDURE
+    data_type: boolean
+  - name: ASSESSMENT_ELIGIBILITY
+    data_type: string
+  - name: CASE_ACCOUNTING_ID
+    data_type: decimal(38,0)
+  - name: CREDIT_NOTE_NUMBER
+    data_type: string
+  - name: CREDIT_NOTE_AMOUNT
+    data_type: double
+  - name: INVOICE_NUMBER
+    data_type: string
+  - name: INVOICE_AMOUNT
+    data_type: double
+  - name: INVOICE_DATE
+    data_type: date
+  - name: CASE_ACCOUNTING_STATUS
+    data_type: string
+  - name: SUPPLIER_SOLUTION
+    data_type: string
+  - name: ACCOUNTING_LABEL
+    data_type: string
+  - name: TRANSPORTATION_COST
+    data_type: double
+  - name: ACCOUNTING_LIST_STATUS
+    data_type: string
+  - name: CASE_ACCOUNTING_OPEN_TIMESTAMP
+    data_type: datetime
+  - name: CASE_ACCOUNTING_CLOSE_TIMESTAMP
+    data_type: datetime
+  - name: LEADTIME_CASE_OPEN_CLOSED
+    data_type: decimal(9,0)
+  - name: LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED
+    data_type: decimal(9,0)
+  - name: SHOP_ID
+    data_type: decimal(38,0)
+  - name: BRAND_ID
+    data_type: decimal(38,0)
   - name: ready_for_pickup_flag
     data_type: decimal(1,0)
     sql: |-
       CASE
           WHEN "FCT_WARRANTY_CASES"."LOGISTIC_STATUS" = 'ready-for-pickup' THEN 1
           ELSE 0
-        END
+        END  
 connection_id: con_MART_SERVICES
-table: FCT_WARRANTY_CASES
+sql: >-
+  select w.*
+
+  from ACC_LH_1009.MART_SERVICES.FCT_WARRANTY_CASES w
+
+  left join ACC_LH_1009.MART_HR.DIM_EMPLOYEES ec on
+  ec.employee_pk=w.case_created_by_employee_fk
+
+  left join ACC_LH_1009.MART_HR.DIM_EMPLOYEES eu on
+  eu.employee_pk=w.case_updated_by_employee_fk
+
+  left join ACC_LH_1009.MART_SHOPS.DIM_SHOPS s on s.shop_pk=w.shop_fk
+
+  left join ACC_LH_1009.MART_CUSTOMERS.DIM_CUSTOMERS c on
+  c.customer_pk=w.customer_fk
+
+  left join ACC_LH_1009.MART_SUPPLIERS_AND_BRANDS.DIM_BRANDS b on
+  b.brand_pk=w.brand_fk
+
+  where  
+
+  s.shop_code not in ('BE998', 'NL999','UK799')
+
+  and w.case_created_by_employee_fk not in ('0a67eb07c116e73e62fb0afe46f12f9a' ,
+  '8cc77f7698308671abc423545c0172e8', '560b584846ad77f8bb69c723187445a3',
+  '253fc522bf2da65c5bb392f174a14fe6', '9337f8f54536d4111bd09913ae5c40d9',
+  '744ad6c8e8951ed653db1b69dc8d17ea',
+  '648bd4f976ffb40be4971a2d1dc54960','9dfe614215d1a8395044706eb77f9aec','48c9c3e78118561d2fbcca0e24b566a6','b2a250be40d74dce5eae6fe2896ded83','5d4533063d1780450e18cfeaecf276ff','db4d000f402db6a9c7d8583f2490018a')
+
+  and  UPPER(c.uuid) not IN  ('37A077C5-FAF7-43E1-88B5-CCDB21C7977C' ,
+  '468DD06B-CD93-4E2E-BBB4-5B0FA5F54A02', '75012170-CCD0-4BD0-A559-877FC00FE1F8'
+
+  ,'427F73ED-752E-4100-8BAE-1AC29011DA15' ,
+  '65BC6B81-C676-4674-A4F7-ED9D851B2263') 
+
+  and w.customer_FK <> 'cc17a0efe9b2c157bf92a51320364bd3'
+
+  and w.case_status <>'canceled'

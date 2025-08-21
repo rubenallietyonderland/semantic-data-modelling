@@ -1,0 +1,6 @@
+unique_name: m_FCT_WARRANTY_CASES_LEADTIME_TIME_AT_SUPPLIER_avg
+object_type: metric
+label: Avg Logistic at supplier Leadtime
+calculation_method: average
+column: LEADTIME_TIME_AT_SUPPLIER
+dataset: FCT_WARRANTY_CASES

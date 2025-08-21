@@ -1,0 +1,84 @@
+unique_name: MAPPING_WARRANTY_CASES
+object_type: dimension
+label: MAPPING_WARRANTY_CASES
+hierarchies:
+  - unique_name: MAPPING_WARRANTY_CASES Hierarchy
+    label: MAPPING_WARRANTY_CASES Hierarchy
+    levels:
+      - unique_name: CASE_PK
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: Case Status
+            label: Case Status
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case statuses
+            is_unique_key: false
+            key_columns:
+              - CASE_STATUS
+            name_column: CASE_STATUS
+          - unique_name: Case Accounting Status
+            label: Case Accounting Status
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case statuses
+            is_unique_key: false
+            key_columns:
+              - CASE_ACCOUNTING_STATUS
+            name_column: CASE_ACCOUNTING_STATUS
+          - unique_name: Case Logistic Status
+            label: Case Logistic Status
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case statuses
+            is_unique_key: false
+            key_columns:
+              - LOGISTIC_STATUS
+            name_column: LOGISTIC_STATUS
+          - unique_name: Short Procedure
+            label: Short Procedure
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Other
+            is_unique_key: false
+            key_columns:
+              - SHORT_PROCEDURE
+            name_column: SHORT_PROCEDURE
+          - unique_name: Case Open Timestamp
+            label: Case Open Timestamp
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case timestamps
+            is_unique_key: false
+            key_columns:
+              - CASE_OPEN_TIMESTAMP
+            name_column: CASE_OPEN_TIMESTAMP
+          - unique_name: Case Close Timestamp
+            label: Case Close Timestamp
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case timestamps
+            is_unique_key: false
+            key_columns:
+              - CASE_CLOSE_TIMESTAMP
+            name_column: CASE_CLOSE_TIMESTAMP
+          - unique_name: Label
+            label: Label
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Other
+            is_unique_key: false
+            key_columns:
+              - LABEL
+            name_column: LABEL
+level_attributes:
+  - unique_name: CASE_PK
+    label: CASE_PK
+    contains_unique_names: false
+    dataset: FCT_WARRANTY_CASES
+    is_unique_key: false
+    key_columns:
+      - CASE_PK
+    name_column: CASE_PK
+relationships: []
+type: standard

@@ -1,0 +1,6 @@
+unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CREATED_READY_FOR_PICK_UP_avg
+object_type: metric
+label: Avg Logistic Created-ReadyForPickUp Leadtime
+calculation_method: average
+column: LEADTIME_CREATED_READY_FOR_PICK_UP
+dataset: FCT_WARRANTY_CASES

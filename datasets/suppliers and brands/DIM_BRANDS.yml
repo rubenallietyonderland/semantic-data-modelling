@@ -1,0 +1,30 @@
+unique_name: DIM_BRANDS
+object_type: dataset
+label: DIM_BRANDS
+columns:
+  - name: BRAND_PK
+    data_type: string
+  - name: MARKET_FK
+    data_type: string
+  - name: BUSINESS_UNIT_FK
+    data_type: string
+  - name: BRAND_ID
+    data_type: decimal(38,0)
+  - name: BRAND_CODE
+    data_type: string
+  - name: BRAND_NAME
+    data_type: string
+  - name: IS_ACTIVE
+    data_type: boolean
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: INGESTED_AT
+    data_type: datetime
+  - name: INTERMEDIATE_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: OPS_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+connection_id: con_ACC_LH_1009_MART_SUPPLIERS_AND_BRANDS
+table: DIM_BRANDS

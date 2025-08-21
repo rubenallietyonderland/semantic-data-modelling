@@ -1,0 +1,99 @@
+unique_name: Services_warranty
+object_type: model
+label: Services_warranty
+dimensions: []
+metrics:
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED_avg
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
+  - unique_name: m_FCT_WARRANTY_CASES_LOGISTIC_CREATED_PICKED_SHIPPED_avg
+  - unique_name: m_warranty_cases_count
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_TIME_AT_SUPPLIER_avg
+  - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CREATED_READY_FOR_PICK_UP_avg
+relationships:
+  - unique_name: FCT_WARRANTY_CASES_MARKET_FK_to_DIM_MARKETS_dimension_DIM_MARKETS_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - MARKET_FK
+    to:
+      dimension: DIM_MARKETS_dimension
+      level: DIM_MARKETS_id
+  - unique_name: FCT_WARRANTY_CASES_CUSTOMER_FK_to_DIM_CUSTOMERS_dimension_DIM_CUSTOMERS_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CUSTOMER_FK
+    to:
+      dimension: DIM_CUSTOMERS_dimension
+      level: DIM_CUSTOMERS_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - BUSINESS_UNIT_FK
+    to:
+      dimension: DIM_BUSINESS_UNITS_dimension
+      level: DIM_BUSINESS_UNITS_id
+  - unique_name: FCT_WARRANTY_CASES_CASE_CREATED_AT_to_DIM_DATES_dimension_DIM_DATES_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_CREATED_AT
+    to:
+      dimension: DIM_DATES_dimension
+      level: DIM_DATES_id
+  - unique_name: FCT_WARRANTY_CASES_SHOP_FK_to_DIM_SHOPS_dimension_DIM_SHOPS_shop_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - SHOP_FK
+    to:
+      dimension: DIM_SHOPS_dimension
+      level: DIM_SHOPS_shop_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_CREATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_CREATED_BY_EMPLOYEE_FK
+    role_play: Created {0}
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_UPDATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_UPDATED_BY_EMPLOYEE_FK
+    role_play: Updated {0}
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_RESOLUTION_UPDATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_RESOLUTION_UPDATED_BY_EMPLOYEE_FK
+    role_play: Resolution updated {0}
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
+  - unique_name: FCT_WARRANTY_CASES_CASE_PK_to_MAPPING_WARRANTY_CASES_CASE_PK
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_PK
+    to:
+      dimension: MAPPING_WARRANTY_CASES
+      level: CASE_PK
+  - unique_name: FCT_WARRANTY_CASES_BRAND_FK_to_DIM_BRANDS_dimension_DIM_BRANDS_brand_id
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - BRAND_FK
+    to:
+      dimension: DIM_BRANDS_dimension
+      level: DIM_BRANDS_brand_id

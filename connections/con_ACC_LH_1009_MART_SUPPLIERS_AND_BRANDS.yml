@@ -1,0 +1,6 @@
+unique_name: con_ACC_LH_1009_MART_SUPPLIERS_AND_BRANDS
+object_type: connection
+label: con_ACC_LH_1009_MART_SUPPLIERS_AND_BRANDS
+as_connection: snowflake
+database: ACC_LH_1009
+schema: MART_SUPPLIERS_AND_BRANDS
