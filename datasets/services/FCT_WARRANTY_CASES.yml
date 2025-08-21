@@ -37,7 +37,7 @@ columns:
   - name: RMA_NUMBER
     data_type: string
   - name: CASE_CREATED_AT
-    data_type: decimal(38,0)
+    data_type: datetime
   - name: CASE_UPDATED_AT
     data_type: datetime
   - name: CASE_STATUS
@@ -172,6 +172,13 @@ columns:
     data_type: decimal(38,0)
   - name: BRAND_ID
     data_type: decimal(38,0)
+  - name: ready_for_pickup_flag
+    data_type: decimal(1,0)
+    sql: |-
+      CASE
+          WHEN "FCT_WARRANTY_CASES"."LOGISTIC_STATUS" = 'ready-for-pickup' THEN 1
+          ELSE 0
+        END  
 connection_id: con_MART_SERVICES
 sql: >-
   select w.*
