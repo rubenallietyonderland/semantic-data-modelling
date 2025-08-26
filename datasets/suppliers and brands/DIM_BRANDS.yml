@@ -26,5 +26,5 @@ columns:
     data_type: datetime
   - name: MART_LOAD_TIMESTAMP
     data_type: datetime
-connection_id: con_ACC_LH_1009_MART_SUPPLIERS_AND_BRANDS
+connection_id: con_MART_SUPPLIERS_AND_BRANDS
 table: DIM_BRANDS

@@ -37,7 +37,7 @@ columns:
   - name: RMA_NUMBER
     data_type: string
   - name: CASE_CREATED_AT
-    data_type: datetime
+    data_type: long
   - name: CASE_UPDATED_AT
     data_type: datetime
   - name: CASE_STATUS
@@ -183,20 +183,20 @@ connection_id: con_MART_SERVICES
 sql: >-
   select w.*
 
-  from ACC_LH_1009.MART_SERVICES.FCT_WARRANTY_CASES w
+  from LAKEHOUSE_PRD.MART_SERVICES.FCT_WARRANTY_CASES w
 
-  left join ACC_LH_1009.MART_HR.DIM_EMPLOYEES ec on
+  left join LAKEHOUSE_PRD.MART_HR.DIM_EMPLOYEES ec on
   ec.employee_pk=w.case_created_by_employee_fk
 
-  left join ACC_LH_1009.MART_HR.DIM_EMPLOYEES eu on
+  left join LAKEHOUSE_PRD.MART_HR.DIM_EMPLOYEES eu on
   eu.employee_pk=w.case_updated_by_employee_fk
 
-  left join ACC_LH_1009.MART_SHOPS.DIM_SHOPS s on s.shop_pk=w.shop_fk
+  left join LAKEHOUSE_PRD.MART_SHOPS.DIM_SHOPS s on s.shop_pk=w.shop_fk
 
-  left join ACC_LH_1009.MART_CUSTOMERS.DIM_CUSTOMERS c on
+  left join LAKEHOUSE_PRD.MART_CUSTOMERS.DIM_CUSTOMERS c on
   c.customer_pk=w.customer_fk
 
-  left join ACC_LH_1009.MART_SUPPLIERS_AND_BRANDS.DIM_BRANDS b on
+  left join LAKEHOUSE_PRD.MART_SUPPLIERS_AND_BRANDS.DIM_BRANDS b on
   b.brand_pk=w.brand_fk
 
   where  
