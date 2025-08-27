@@ -14,7 +14,6 @@ metrics:
   - unique_name: test
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_avg
     folder: Measures
-  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_sum
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
