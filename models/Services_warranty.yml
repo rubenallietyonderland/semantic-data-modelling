@@ -4,11 +4,17 @@ label: Services_warranty
 dimensions: []
 metrics:
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CASE_ACCOUNTING_OPEN_CLOSED_avg
+    folder: Measures
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
+    folder: Measures
   - unique_name: m_FCT_WARRANTY_CASES_LOGISTIC_CREATED_PICKED_SHIPPED_avg
+    folder: Measures
   - unique_name: m_warranty_cases_count
+    folder: Measures
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_TIME_AT_SUPPLIER_avg
+    folder: Measures
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CREATED_READY_FOR_PICK_UP_avg
+    folder: Measures
 relationships:
   - unique_name: FCT_WARRANTY_CASES_MARKET_FK_to_DIM_MARKETS_dimension_DIM_MARKETS_id
     from:

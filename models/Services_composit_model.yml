@@ -1,0 +1,6 @@
+unique_name: Services_composit_model
+object_type: composite_model
+label: Services_composit_model
+models:
+  - Services_one_big_model
+  - Services_warranty
