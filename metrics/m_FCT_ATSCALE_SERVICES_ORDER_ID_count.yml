@@ -4,3 +4,4 @@ label: Count Orders
 calculation_method: count distinct
 column: ORDER_ID
 dataset: FCT_ATSCALE_SERVICES
+unrelated_dimensions_handling: empty

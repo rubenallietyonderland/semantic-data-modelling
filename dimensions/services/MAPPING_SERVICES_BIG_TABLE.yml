@@ -6,9 +6,9 @@ hierarchies:
     label: Order Hierarchy
     levels:
       - unique_name: MAPPING_SERVICES_BIG_TABLE_order_status_name
-      - unique_name: MAPPING_SERVICES_BIG_TABLE_order_id
       - unique_name: order_created_at
       - unique_name: order_created_at_test
+      - unique_name: MAPPING_SERVICES_BIG_TABLE_order_id
   - unique_name: Item Hiearchy
     label: Item Hiearchy
     levels:
