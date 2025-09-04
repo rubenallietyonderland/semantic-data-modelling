@@ -1,0 +1,9 @@
+unique_name: c_avg_customer_open_closed_leadtime
+object_type: metric_calc
+label: c_avg_customer_open_closed_leadtime
+expression: |-
+  (
+          [MAPPING_WARRANTY_CASES].[MAPPING_WARRANTY_CASES Hierarchy].[CASE_STATUS].&[Closed],
+          [Measures].[m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg]
+        )
+mdx_aggregate_function: AVG

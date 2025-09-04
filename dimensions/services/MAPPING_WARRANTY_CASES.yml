@@ -5,18 +5,11 @@ hierarchies:
   - unique_name: MAPPING_WARRANTY_CASES Hierarchy
     label: MAPPING_WARRANTY_CASES Hierarchy
     levels:
+      - unique_name: CASE_STATUS
+        is_hidden: true
       - unique_name: CASE_PK
         is_hidden: true
         secondary_attributes:
-          - unique_name: Case Status
-            label: Case Status
-            contains_unique_names: false
-            dataset: FCT_WARRANTY_CASES
-            folder: Case statuses
-            is_unique_key: false
-            key_columns:
-              - CASE_STATUS
-            name_column: CASE_STATUS
           - unique_name: Case Accounting Status
             label: Case Accounting Status
             contains_unique_names: false
@@ -71,6 +64,15 @@ hierarchies:
             key_columns:
               - LABEL
             name_column: LABEL
+          - unique_name: Case Status
+            label: Case Status
+            contains_unique_names: false
+            dataset: FCT_WARRANTY_CASES
+            folder: Case statuses
+            is_unique_key: false
+            key_columns:
+              - CASE_STATUS
+            name_column: CASE_STATUS
 level_attributes:
   - unique_name: CASE_PK
     label: CASE_PK
@@ -80,5 +82,14 @@ level_attributes:
     key_columns:
       - CASE_PK
     name_column: CASE_PK
+  - unique_name: CASE_STATUS
+    label: CASE_STATUS
+    contains_unique_names: false
+    dataset: FCT_WARRANTY_CASES
+    folder: Case statuses
+    is_unique_key: false
+    key_columns:
+      - CASE_STATUS
+    name_column: CASE_STATUS
 relationships: []
 type: standard
