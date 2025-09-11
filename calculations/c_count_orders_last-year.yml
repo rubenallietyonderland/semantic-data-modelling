@@ -6,9 +6,7 @@ expression: >-
 
   NULL 
 
-  ELSE (ParallelPeriod([order DIM_DATES_dimension].[order DIM_DATES_dimension
-  Hierarchy].[order DIM_DATES_dimension_year], 1, [order
-  DIM_DATES_dimension].[order DIM_DATES_dimension Hierarchy].CurrentMember),
+  ELSE (ParallelPeriod([DIM_DATES_QUERY_dimension].[DIM_DATES_QUERY_month Hierarchy].[DIM_DATES_QUERY_month_year], 1, [DIM_DATES_QUERY_dimension].[DIM_DATES_QUERY_month Hierarchy].CurrentMember),
   [Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count]) END
 is_hidden: false
 mdx_aggregate_function: COUNT
