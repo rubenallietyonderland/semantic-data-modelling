@@ -1,31 +1,21 @@
-unique_name: DIM_DATE_MONTHS
+unique_name: DIM_DATE_QUERY
 object_type: dataset
-label: DIM_DATE_MONTHS
+label: DIM_DATE_QUERY
 columns:
+  - name: DATE_ID
+    data_type: decimal(11,0)
   - name: YEAR_MONTH_ID
     data_type: decimal(8,0)
+  - name: YEAR_WEEK_ID
+    data_type: decimal(8,0)
+  - name: CALENDAR_DATE
+    data_type: date
   - name: YEAR
     data_type: decimal(4,0)
   - name: QUARTER
     data_type: decimal(2,0)
   - name: MONTH
     data_type: decimal(2,0)
-  - name: MONTH_NAME
-    data_type: string
-  - name: UPDATED_AT
-    data_type: datetime
-  - name: INTERMEDIATE_LOAD_TIMESTAMP
-    data_type: datetime
-  - name: OPS_LOAD_TIMESTAMP
-    data_type: datetime
-  - name: MART_LOAD_TIMESTAMP
-    data_type: datetime
-  - name: DATE_ID
-    data_type: decimal(11,0)
-  - name: YEAR_WEEK_ID
-    data_type: decimal(8,0)
-  - name: CALENDAR_DATE
-    data_type: date
   - name: WEEKDAY
     data_type: decimal(2,0)
   - name: WEEKDAY_NAME_SHORT
@@ -40,6 +30,14 @@ columns:
     data_type: string
   - name: IS_REPORTING_DAY
     data_type: boolean
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: INTERMEDIATE_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: OPS_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
   - name: WEEK_START_DATE
     data_type: date
   - name: RETAIL_PERIOD
@@ -48,6 +46,8 @@ columns:
     data_type: decimal(1,0)
   - name: RETAIL_WEEK_NUMBER
     data_type: decimal(2,0)
+  - name: MONTH_NAME
+    data_type: string
 connection_id: con_MART_CUSTOMERS
 sql: >-
   select d.*, w.week_start_date, w.retail_period, w.retail_quarter,

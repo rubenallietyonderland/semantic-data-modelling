@@ -1,0 +1,81 @@
+unique_name: DIM_DATES_QUERY_dimension
+object_type: dimension
+label: DIM_DATES_QUERY_dimension
+hierarchies:
+  - unique_name: DIM_DATES_QUERY_month Hierarchy
+    label: Month Hierarchy
+    levels:
+      - unique_name: DIM_DATES_QUERY_month_year
+      - unique_name: DIM_DATES_QUERY_month_month
+        secondary_attributes:
+          - unique_name: DIM_DATES_QUERY_month_month_name
+            label: Month name
+            contains_unique_names: false
+            dataset: DIM_DATE_QUERY
+            is_unique_key: false
+            key_columns:
+              - MONTH_NAME
+            name_column: MONTH_NAME
+      - unique_name: DIM_DATES_QUERY_month_day
+  - unique_name: DIM_DATES_QUERY_week Hierarchy
+    label: Week Hierarchy
+    levels:
+      - unique_name: DIM_DATES_QUERY_week_year
+      - unique_name: DIM_DATES_QUERY_week_week
+      - unique_name: DIM_DATES_QUERY_week_day
+level_attributes:
+  - unique_name: DIM_DATES_QUERY_month_year
+    label: Year
+    contains_unique_names: false
+    dataset: DIM_DATE_QUERY
+    is_unique_key: false
+    key_columns:
+      - YEAR
+    name_column: YEAR
+    time_unit: halfyear
+  - unique_name: DIM_DATES_QUERY_month_month
+    label: Month
+    contains_unique_names: false
+    dataset: DIM_DATE_QUERY
+    is_unique_key: false
+    key_columns:
+      - YEAR_MONTH_ID
+    name_column: MONTH
+    time_unit: month
+  - unique_name: DIM_DATES_QUERY_month_day
+    label: Day
+    contains_unique_names: false
+    dataset: DIM_DATE_QUERY
+    is_unique_key: false
+    key_columns:
+      - DATE_ID
+    name_column: CALENDAR_DATE
+    time_unit: day
+  - unique_name: DIM_DATES_QUERY_week_year
+    label: Year
+    contains_unique_names: false
+    dataset: DIM_DATE_QUERY
+    is_unique_key: false
+    key_columns:
+      - YEAR
+    name_column: YEAR
+    time_unit: year
+  - unique_name: DIM_DATES_QUERY_week_week
+    label: Week
+    contains_unique_names: false
+    dataset: DIM_DATE_QUERY
+    is_unique_key: false
+    key_columns:
+      - YEAR_WEEK_ID
+    name_column: RETAIL_WEEK_NUMBER
+    time_unit: week
+  - unique_name: DIM_DATES_QUERY_week_day
+    label: Day
+    contains_unique_names: false
+    dataset: DIM_DATE_QUERY
+    is_unique_key: false
+    key_columns:
+      - DATE_ID
+    name_column: CALENDAR_DATE
+    time_unit: day
+type: time
