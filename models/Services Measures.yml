@@ -9,8 +9,6 @@ metrics:
     folder: Counts
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
     folder: Counts
-  - unique_name: c_count_orders_last-year
-    folder: Counts
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_avg
     folder: Leadtimes
   - unique_name: m_services_latest_create_date
@@ -19,8 +17,7 @@ metrics:
     folder: Leadtimes
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_avg
     folder: Leadtimes
-  - unique_name: c_count_items_last-year
-    folder: Counts
+  - unique_name: c_count_orders_last-year
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
@@ -48,15 +45,6 @@ relationships:
     to:
       dimension: DIM_EMPLOYEES_dimension
       level: DIM_EMPLOYEES_id
-  - unique_name: FCT_ATSCALE_SERVICES_ORDER_DATE_ID_to_DIM_DATES_dimension_DIM_DATES_id
-    from:
-      dataset: FCT_ATSCALE_SERVICES
-      join_columns:
-        - ORDER_DATE_ID
-    role_play: order {0}
-    to:
-      dimension: DIM_DATES_dimension
-      level: DIM_DATES_id
   - unique_name: >-
       FCT_ATSCALE_SERVICES_CUSTOMER_FK_to_DIM_CUSTOMERS_dimension_DIM_CUSTOMERS_id
     from:
@@ -120,16 +108,6 @@ relationships:
     to:
       dimension: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
       level: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Level
-  - unique_name: >-
-      FCT_ATSCALE_SERVICES_ITEM_PROCESSED_DATE_ID_to_DIM_DATES_dimension_DIM_DATES_id
-    from:
-      dataset: FCT_ATSCALE_SERVICES
-      join_columns:
-        - ITEM_PROCESSED_DATE_ID
-    role_play: Item {0}
-    to:
-      dimension: DIM_DATES_dimension
-      level: DIM_DATES_id
   - unique_name: >-
       FCT_ATSCALE_SERVICES_ORDER_DATE_ID_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_month_day
     from:
