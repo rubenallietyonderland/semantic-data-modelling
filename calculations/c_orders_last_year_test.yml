@@ -1,6 +1,6 @@
-unique_name: c_count_orders_last-year
+unique_name: c_orders_last_year_test
 object_type: metric_calc
-label: Count Orders Last Year
+label: c_orders_last_year_test
 expression: >-
   CASE WHEN ISEMPTY([Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count]) THEN 
 

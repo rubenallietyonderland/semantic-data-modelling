@@ -18,6 +18,7 @@ metrics:
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_avg
     folder: Leadtimes
   - unique_name: c_count_orders_last-year
+  - unique_name: c_orders_last_year_test
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
@@ -114,37 +115,15 @@ relationships:
       dataset: FCT_ATSCALE_SERVICES
       join_columns:
         - ORDER_DATE_ID
-    role_play: Created {0}
     to:
       dimension: DIM_DATES_QUERY_dimension
       level: DIM_DATES_QUERY_month_day
-  - unique_name: >-
-      FCT_ATSCALE_SERVICES_ORDER_DATE_ID_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_week_day
-    from:
-      dataset: FCT_ATSCALE_SERVICES
-      join_columns:
-        - ORDER_DATE_ID
-    role_play: Created {0}
-    to:
-      dimension: DIM_DATES_QUERY_dimension
-      level: DIM_DATES_QUERY_week_day
   - unique_name: >-
       FCT_ATSCALE_SERVICES_ITEM_PROCESSED_DATE_ID_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_week_day
     from:
       dataset: FCT_ATSCALE_SERVICES
       join_columns:
         - ITEM_PROCESSED_DATE_ID
-    role_play: Processed {0}
     to:
       dimension: DIM_DATES_QUERY_dimension
       level: DIM_DATES_QUERY_week_day
-  - unique_name: >-
-      FCT_ATSCALE_SERVICES_ITEM_PROCESSED_DATE_ID_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_month_day
-    from:
-      dataset: FCT_ATSCALE_SERVICES
-      join_columns:
-        - ITEM_PROCESSED_DATE_ID
-    role_play: Processed {0}
-    to:
-      dimension: DIM_DATES_QUERY_dimension
-      level: DIM_DATES_QUERY_month_day
