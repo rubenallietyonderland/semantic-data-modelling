@@ -17,8 +17,8 @@ metrics:
     folder: Leadtimes
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_avg
     folder: Leadtimes
-  - unique_name: c_count_orders_last-year
-  - unique_name: c_orders_last_year_test
+  - unique_name: avg_test
+  - unique_name: test_count
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
