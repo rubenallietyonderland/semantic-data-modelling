@@ -1,6 +1,0 @@
-unique_name: test_count
-object_type: metric_calc
-label: test_count
-expression: >-
-  COUNT([MAPPING_SERVICES_BIG_TABLE].[Item
-  Hiearchy].[MAPPING_SERVICES_BIG_TABLE_Item_id].Members)
