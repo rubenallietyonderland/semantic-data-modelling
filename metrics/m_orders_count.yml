@@ -1,6 +1,0 @@
-unique_name: m_orders_count
-object_type: metric
-label: orders count
-calculation_method: count distinct
-column: ORDER_ID
-dataset: FCT_SERVICE_ORDERS

@@ -3,7 +3,7 @@ object_type: dimension
 label: DIM_DATES_QUERY_dimension
 hierarchies:
   - unique_name: DIM_DATES_QUERY_month Hierarchy
-    label: Created Month Hierarchy
+    label: Month Hierarchy
     levels:
       - unique_name: DIM_DATES_QUERY_month_year
       - unique_name: DIM_DATES_QUERY_month_month
@@ -18,7 +18,7 @@ hierarchies:
             name_column: MONTH_NAME
       - unique_name: DIM_DATES_QUERY_month_day
   - unique_name: DIM_DATES_QUERY_week Hierarchy
-    label: Processed Week Hierarchy
+    label: Week Hierarchy
     levels:
       - unique_name: DIM_DATES_QUERY_week_year
       - unique_name: DIM_DATES_QUERY_week_week

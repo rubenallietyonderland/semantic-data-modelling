@@ -9,21 +9,27 @@ metrics:
     folder: Counts
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
     folder: Counts
-  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_avg
-    folder: Leadtimes
-  - unique_name: m_services_latest_create_date
+  - unique_name: avg_item_lead_time_2_14
+    folder: Leadtime Items
+  - unique_name: c_count_items_last-year_h_month
+    folder: Counts Month Hierarchy
+  - unique_name: c_count_orders_last-year_h_month
+    folder: Counts Month Hierarchy
+  - unique_name: c_services_last_year_h_month
+    folder: Counts Month Hierarchy
+  - unique_name: c_count_items_last-year_h_week
+    folder: Counts Week Hierarchy
+  - unique_name: c_count_orders_last-year_h_week
+    folder: Counts Week Hierarchy
+  - unique_name: c_services_last_year_h_week
+    folder: Counts Week Hierarchy
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_sum
+  - unique_name: avg_item_lead_time_2_15
+    folder: Leadtime Items
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_CREATED_AT_max
     folder: Dates
-  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_1_6_avg
-    folder: Leadtimes
-  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_avg
-    folder: Leadtimes
-  - unique_name: avg_test
-  - unique_name: c_count_orders_last-year
-    folder: Counts
-  - unique_name: c_count_items_last-year
-    folder: Counts
-  - unique_name: c_services_last_year
-    folder: Counts
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id

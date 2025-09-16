@@ -1,4 +1,0 @@
-unique_name: avg_test
-object_type: metric_calc
-label: avg_test
-expression: AVG([MAPPING_SERVICES_BIG_TABLE].[Item Hiearchy].[MAPPING_SERVICES_BIG_TABLE_Item_id].Members, [measures].[m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_avg])

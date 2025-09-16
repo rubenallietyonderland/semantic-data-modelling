@@ -1,6 +1,6 @@
-unique_name: c_count_orders_last-year
+unique_name: c_count_orders_last-year_h_week
 object_type: metric_calc
-label: Count Orders -1 Year
+label: w_Count Orders -1 Year
 expression: >-
   CASE WHEN ISEMPTY([Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count]) THEN 
 
@@ -9,8 +9,8 @@ expression: >-
   ELSE 
 
   (ParallelPeriod([Created DIM_DATES_QUERY_dimension].[Created
-  DIM_DATES_QUERY_month Hierarchy].[Created DIM_DATES_QUERY_month_year], 1,
-  [Created DIM_DATES_QUERY_dimension].[Created DIM_DATES_QUERY_month
+  DIM_DATES_QUERY_week Hierarchy].[Created DIM_DATES_QUERY_week_year], 1,
+  [Created DIM_DATES_QUERY_dimension].[Created DIM_DATES_QUERY_week
   Hierarchy].CurrentMember),
   [Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count]) 
 

@@ -1,0 +1,17 @@
+unique_name: c_count_items_last-year_h_month
+object_type: metric_calc
+label: m_Count Items -1 Year
+expression: >-
+  CASE WHEN ISEMPTY([Measures].[m_FCT_ATSCALE_SERVICES_ITEM_ID_count]) THEN 
+
+  NULL 
+
+  ELSE 
+
+  (ParallelPeriod([Created DIM_DATES_QUERY_dimension].[Created
+  DIM_DATES_QUERY_month Hierarchy].[Created DIM_DATES_QUERY_month_year], 1,
+  [Created DIM_DATES_QUERY_dimension].[Created DIM_DATES_QUERY_month
+  Hierarchy].CurrentMember), [Measures].[m_FCT_ATSCALE_SERVICES_ITEM_ID_count]) 
+
+  END
+mdx_aggregate_function: COUNT
