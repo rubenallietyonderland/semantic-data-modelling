@@ -1,6 +1,6 @@
 unique_name: DIM_DATES_QUERY_dimension
 object_type: dimension
-label: DIM_DATES_QUERY_dimension
+label: Dates
 hierarchies:
   - unique_name: DIM_DATES_QUERY_month Hierarchy
     label: Month Hierarchy

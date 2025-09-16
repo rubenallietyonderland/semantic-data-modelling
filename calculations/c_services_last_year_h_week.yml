@@ -1,6 +1,6 @@
 unique_name: c_services_last_year_h_week
 object_type: metric_calc
-label: w_Count Services -1 Year
+label: Count Services -1 Year
 expression: >-
   CASE WHEN ISEMPTY([Measures].[m_FCT_ATSCALE_SERVICES_SERVICE_ID_count]) THEN 
 
