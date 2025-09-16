@@ -139,7 +139,7 @@ relationships:
     from:
       dataset: FCT_ATSCALE_SERVICES
       join_columns:
-        - ORDER_CREATED_AT
+        - ORDER_DATE_ID
     role_play: Created {0}
     to:
       dimension: DIM_DATES_QUERY_dimension
@@ -149,7 +149,7 @@ relationships:
     from:
       dataset: FCT_ATSCALE_SERVICES
       join_columns:
-        - ORDER_CREATED_AT
+        - ORDER_DATE_ID
     role_play: Created {0}
     to:
       dimension: DIM_DATES_QUERY_dimension
