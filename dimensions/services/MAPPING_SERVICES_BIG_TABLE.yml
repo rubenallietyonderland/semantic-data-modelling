@@ -7,7 +7,6 @@ hierarchies:
     levels:
       - unique_name: MAPPING_SERVICES_BIG_TABLE_order_status_name
       - unique_name: order_created_at
-      - unique_name: order_created_at_test
       - unique_name: MAPPING_SERVICES_BIG_TABLE_order_id
   - unique_name: Item Hiearchy
     label: Item Hiearchy
@@ -94,13 +93,5 @@ level_attributes:
     key_columns:
       - ORDER_CREATED_AT
     name_column: ORDER_CREATED_AT
-  - unique_name: order_created_at_test
-    label: order_created_at_test
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - ORDER_CRATED_AT_TEST
-    name_column: ORDER_CRATED_AT_TEST
 relationships: []
 type: standard

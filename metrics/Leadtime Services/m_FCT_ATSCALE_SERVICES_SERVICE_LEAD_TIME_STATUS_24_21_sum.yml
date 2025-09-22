@@ -1,0 +1,7 @@
+unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_24_21_sum
+object_type: metric
+label: Service Lead Time Status 24 21
+calculation_method: sum
+column: SERVICE_LEAD_TIME_STATUS_24_21
+dataset: FCT_ATSCALE_SERVICES
+is_hidden: true

@@ -1,0 +1,9 @@
+unique_name: avg_order_lead_time_7_8
+object_type: metric_calc
+label: Avg - Ready-for-shipment - On-the-way-to-the-customer
+expression: |-
+  AVG(
+        DESCENDANTS(
+        [MAPPING_SERVICES_BIG_TABLE].[Order Hierarchy].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[Order Hierarchy].[MAPPING_SERVICES_BIG_TABLE_order_id]), 
+        ([Measures].[m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_7_8_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count_not_distinct]))

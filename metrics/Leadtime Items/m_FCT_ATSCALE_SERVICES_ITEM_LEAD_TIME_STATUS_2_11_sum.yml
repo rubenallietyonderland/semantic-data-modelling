@@ -1,0 +1,7 @@
+unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_11_sum
+object_type: metric
+label: Item Lead Time Status 2 11
+calculation_method: sum
+column: ITEM_LEAD_TIME_STATUS_2_11
+dataset: FCT_ATSCALE_SERVICES
+is_hidden: true

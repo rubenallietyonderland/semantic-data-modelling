@@ -1,0 +1,9 @@
+unique_name: avg_service_lead_time_13_4
+object_type: metric_calc
+label: Avg - On-the-way-to-the-store - Being-processed
+expression: |-
+  AVG(
+        DESCENDANTS(
+        [MAPPING_SERVICES_BIG_TABLE].[Service Hierarchy].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[Service Hierarchy].[MAPPING_SERVICES_BIG_TABLE_service_id]), 
+        ([Measures].[m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_13_4_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_SERVICE_ID_count_not_distinct]))

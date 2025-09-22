@@ -1,0 +1,9 @@
+unique_name: avg_item_lead_time_14_15
+object_type: metric_calc
+label: Avg - Ready-for-pickup - Paid-and-picked
+expression: |-
+  AVG(
+        DESCENDANTS(
+        [MAPPING_SERVICES_BIG_TABLE].[Item Hierarchy].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[Item Hierarchy].[MAPPING_SERVICES_BIG_TABLE_Item_id]), 
+        ([Measures].[m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_14_15_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct]))

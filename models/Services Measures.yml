@@ -26,10 +26,29 @@ metrics:
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_sum
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_sum
-  - unique_name: avg_item_lead_time_2_15
-    folder: Leadtime Items
   - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_CREATED_AT_max
     folder: Dates
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_1_2_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_11_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_12_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_3_4_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_4_7_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_14_15_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_11_12_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_count_not_distinct
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_1_2_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_4_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_7_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_5_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_8_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_4_5_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_7_8_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count_not_distinct
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_1_6_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_13_4_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_4_6_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_1_21_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_24_21_sum
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
@@ -92,24 +111,6 @@ relationships:
     to:
       dimension: MAPPING_SERVICES_BIG_TABLE
       level: MAPPING_SERVICES_BIG_TABLE_service_item_id
-  - unique_name: >-
-      FCT_ATSCALE_SERVICES_ITEM_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_Item_id
-    from:
-      dataset: FCT_ATSCALE_SERVICES
-      join_columns:
-        - ITEM_PK
-    to:
-      dimension: MAPPING_SERVICES_BIG_TABLE
-      level: MAPPING_SERVICES_BIG_TABLE_Item_id
-  - unique_name: >-
-      FCT_ATSCALE_SERVICES_ORDER_PK_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_order_id
-    from:
-      dataset: FCT_ATSCALE_SERVICES
-      join_columns:
-        - ORDER_PK
-    to:
-      dimension: MAPPING_SERVICES_BIG_TABLE
-      level: MAPPING_SERVICES_BIG_TABLE_order_id
   - unique_name: >-
       FCT_ATSCALE_SERVICES_SERVICE_PRODUCT_CATEGORY_FK_to_DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
       Level

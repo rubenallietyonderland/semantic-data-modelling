@@ -1,0 +1,7 @@
+unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_1_2_sum
+object_type: metric
+label: Order Order Lead Time Status 1 2
+calculation_method: sum
+column: ORDER_ORDER_LEAD_TIME_STATUS_1_2
+dataset: FCT_ATSCALE_SERVICES
+is_hidden: true

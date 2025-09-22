@@ -1,8 +1,0 @@
-unique_name: test
-object_type: metric_calc
-label: test
-expression: |-
-  SUM(
-        DESCENDANTS(
-        [MAPPING_SERVICES_BIG_TABLE].[Item Hiearchy].CurrentMember,
-        [MAPPING_SERVICES_BIG_TABLE].[Item Hiearchy].[MAPPING_SERVICES_BIG_TABLE_Item_id]), [Measures].[m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_sum])

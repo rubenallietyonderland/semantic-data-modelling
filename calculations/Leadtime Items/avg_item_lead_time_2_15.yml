@@ -4,6 +4,6 @@ label: Avg - New - paid-and-picked item
 expression: |-
   AVG(
         DESCENDANTS(
-        [MAPPING_SERVICES_BIG_TABLE].[Item Hiearchy].CurrentMember,
-        [MAPPING_SERVICES_BIG_TABLE].[Item Hiearchy].[MAPPING_SERVICES_BIG_TABLE_Item_id]), 
+        [MAPPING_SERVICES_BIG_TABLE].[Item Hierarchy].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[Item Hierarchy].[MAPPING_SERVICES_BIG_TABLE_Item_id]), 
         ([Measures].[m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct]))

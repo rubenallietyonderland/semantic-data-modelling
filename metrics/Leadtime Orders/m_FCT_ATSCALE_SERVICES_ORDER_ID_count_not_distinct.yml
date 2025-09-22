@@ -1,0 +1,7 @@
+unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_count_not_distinct
+object_type: metric
+label: Order ID
+calculation_method: count non-null
+column: ORDER_ID
+dataset: FCT_ATSCALE_SERVICES
+is_hidden: true
