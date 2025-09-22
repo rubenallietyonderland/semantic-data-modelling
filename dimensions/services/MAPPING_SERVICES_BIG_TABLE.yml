@@ -8,8 +8,8 @@ hierarchies:
       - unique_name: MAPPING_SERVICES_BIG_TABLE_order_status_name
       - unique_name: order_created_at
       - unique_name: MAPPING_SERVICES_BIG_TABLE_order_id
-  - unique_name: Item Hiearchy
-    label: Item Hiearchy
+  - unique_name: Item Hierarchy
+    label: Item Hierarchy
     levels:
       - unique_name: MAPPING_SERVICES_BIG_TABLE_item_status_name
       - unique_name: MAPPING_SERVICES_BIG_TABLE_Item_id
