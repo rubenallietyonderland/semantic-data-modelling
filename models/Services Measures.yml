@@ -9,10 +9,6 @@ metrics:
     folder: Counts
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
     folder: Counts
-  - unique_name: avg_item_lead_time_2_14
-    folder: Leadtime Items
-  - unique_name: c_count_items_last-year_h_month
-    folder: Counts Month Hierarchy
   - unique_name: c_count_orders_last-year_h_month
     folder: Counts Month Hierarchy
   - unique_name: c_services_last_year_h_month
@@ -49,6 +45,48 @@ metrics:
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_4_6_sum
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_1_21_sum
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_24_21_sum
+  - unique_name: avg_order_lead_time_1_2
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_4
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_5
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_7
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_8
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_4_5
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_7_8
+    folder: Leadtime Orders
+  - unique_name: avg_item_lead_time_1_2
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_11_12
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_14_15
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_11
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_12
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_14
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_15
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_3_4
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_4_7
+    folder: Leadtime Items
+  - unique_name: avg_service_lead_time_1_21
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_1_6
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_13_4
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_24_21
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_4_6
+    folder: Leadtime Services
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
@@ -161,3 +199,21 @@ relationships:
     to:
       dimension: DIM_DATES_QUERY_dimension
       level: DIM_DATES_QUERY_week_day
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_SERVICE_ITEM_ID_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_item_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - SERVICE_ITEM_ID
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_item_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_ID_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_order_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_ID
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_order_id
