@@ -10,15 +10,15 @@ metrics:
   - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
     folder: Counts
   - unique_name: c_count_orders_last-year_h_month
-    folder: Counts Month Hierarchy
+    folder: Counts Financial Hierarchy
   - unique_name: c_services_last_year_h_month
-    folder: Counts Month Hierarchy
+    folder: Counts Financial Hierarchy
   - unique_name: c_count_items_last-year_h_week
-    folder: Counts Week Hierarchy
+    folder: Counts Retail Hierarchy
   - unique_name: c_count_orders_last-year_h_week
-    folder: Counts Week Hierarchy
+    folder: Counts Retail Hierarchy
   - unique_name: c_services_last_year_h_week
-    folder: Counts Week Hierarchy
+    folder: Counts Retail Hierarchy
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_sum
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct
   - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_sum
