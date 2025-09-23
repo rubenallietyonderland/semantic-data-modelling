@@ -1,4 +1,4 @@
-unique_name: c_count_items_last-year_h_week
+unique_name: c_count_items_last-year_h_month
 object_type: metric_calc
 label: Count Items -1 Year
 expression: >-
@@ -9,8 +9,8 @@ expression: >-
   ELSE 
 
   (ParallelPeriod([Created DIM_DATES_QUERY_dimension].[Created
-  DIM_DATES_QUERY_week Hierarchy].[Created DIM_DATES_QUERY_week_year], 1,
-  [Created DIM_DATES_QUERY_dimension].[Created DIM_DATES_QUERY_week
+  DIM_DATES_QUERY_fiancial Hierarchy].[Created DIM_DATES_QUERY_month_year], 1,
+  [Created DIM_DATES_QUERY_dimension].[Created DIM_DATES_QUERY_fiancial
   Hierarchy].CurrentMember), [Measures].[m_FCT_ATSCALE_SERVICES_ITEM_ID_count]) 
 
   END

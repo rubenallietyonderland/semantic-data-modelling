@@ -2,30 +2,9 @@ unique_name: MAPPING_SERVICES_BIG_TABLE
 object_type: dimension
 label: Services Attributes
 hierarchies:
-  - unique_name: Order Hierarchy
-    label: Order Hierarchy
-    levels:
-      - unique_name: MAPPING_SERVICES_BIG_TABLE_order_status_name
-      - unique_name: MAPPING_SERVICES_BIG_TABLE_order_id
-        secondary_attributes:
-          - unique_name: MAPPING_SERVICES_BIG_TABLE_order_created_at
-            label: Order Created At
-            contains_unique_names: false
-            dataset: MAPPING_ONE_TABLE_SERVICES
-            is_unique_key: false
-            key_columns:
-              - ORDER_CREATED_AT
-            name_column: ORDER_CREATED_AT
-  - unique_name: Item Hierarchy
-    label: Item Hierarchy
-    levels:
-      - unique_name: MAPPING_SERVICES_BIG_TABLE_item_status_name
-      - unique_name: MAPPING_SERVICES_BIG_TABLE_item_id
   - unique_name: Service Hierarchy
     label: Service Hierarchy
     levels:
-      - unique_name: MAPPING_SERVICES_BIG_TABLE_service_status_name
-      - unique_name: MAPPING_SERVICES_BIG_TABLE_service_id
       - unique_name: MAPPING_SERVICES_BIG_TABLE_service_item_id
         secondary_attributes:
           - unique_name: MAPPING_SERVICES_BIG_TABLE_PRICING
@@ -69,13 +48,61 @@ hierarchies:
               - MULTIPLESERVICE_DESCRIPTION
             name_column: MULTIPLESERVICE_DESCRIPTION
           - unique_name: MAPPING_SERVICES_BIG_TABLE_LT_product_Cat
-            label: LT product cat
+            label: Lead time product category
             contains_unique_names: false
             dataset: MAPPING_ONE_TABLE_SERVICES
             is_unique_key: false
             key_columns:
               - LT_PRODUCT_CAT
             name_column: LT_PRODUCT_CAT
+          - unique_name: MAPPING_SERVICES_BIG_TABLE_order_id
+            label: Order Id
+            contains_unique_names: false
+            dataset: MAPPING_ONE_TABLE_SERVICES
+            is_unique_key: false
+            key_columns:
+              - ORDER_ID
+            name_column: ORDER_ID
+          - unique_name: MAPPING_SERVICES_BIG_TABLE_item_id
+            label: Item Id
+            contains_unique_names: false
+            dataset: MAPPING_ONE_TABLE_SERVICES
+            is_unique_key: false
+            key_columns:
+              - ITEM_ID
+            name_column: ITEM_ID
+          - unique_name: MAPPING_SERVICES_BIG_TABLE_service_id
+            label: Service Id
+            contains_unique_names: false
+            dataset: MAPPING_ONE_TABLE_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_ID
+            name_column: SERVICE_ID
+          - unique_name: MAPPING_SERVICES_BIG_TABLE_order_status
+            label: Order Status
+            contains_unique_names: false
+            dataset: MAPPING_ONE_TABLE_SERVICES
+            is_unique_key: false
+            key_columns:
+              - ORDER_STATUS_NAME
+            name_column: ORDER_STATUS_NAME
+          - unique_name: MAPPING_SERVICES_BIG_TABLE_item_status
+            label: Item Status
+            contains_unique_names: false
+            dataset: MAPPING_ONE_TABLE_SERVICES
+            is_unique_key: false
+            key_columns:
+              - ITEM_STATUS_NAME
+            name_column: ITEM_STATUS_NAME
+          - unique_name: MAPPING_SERVICES_BIG_TABLE_service_status
+            label: Service Status
+            contains_unique_names: false
+            dataset: MAPPING_ONE_TABLE_SERVICES
+            is_unique_key: false
+            key_columns:
+              - SERVICE_STATUS_NAME
+            name_column: SERVICE_STATUS_NAME
 level_attributes:
   - unique_name: MAPPING_SERVICES_BIG_TABLE_service_item_id
     label: Service Item Id
@@ -83,55 +110,7 @@ level_attributes:
     dataset: MAPPING_ONE_TABLE_SERVICES
     is_unique_key: false
     key_columns:
-      - SERVICE_ITEM_PK
+      - SERVICE_ITEM_ID
     name_column: SERVICE_ITEM_ID
-  - unique_name: MAPPING_SERVICES_BIG_TABLE_service_id
-    label: Service Id
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - SERVICE_ID
-    name_column: SERVICE_ID
-  - unique_name: MAPPING_SERVICES_BIG_TABLE_service_status_name
-    label: Service Status
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - SERVICE_STATUS_NAME
-    name_column: SERVICE_STATUS_NAME
-  - unique_name: MAPPING_SERVICES_BIG_TABLE_item_id
-    label: Item Id
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - ITEM_ID
-    name_column: ITEM_ID
-  - unique_name: MAPPING_SERVICES_BIG_TABLE_item_status_name
-    label: Item Status
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - ITEM_STATUS_NAME
-    name_column: ITEM_STATUS_NAME
-  - unique_name: MAPPING_SERVICES_BIG_TABLE_order_id
-    label: Order Id
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - ORDER_PK
-    name_column: ORDER_ID
-  - unique_name: MAPPING_SERVICES_BIG_TABLE_order_status_name
-    label: Order Status
-    contains_unique_names: false
-    dataset: MAPPING_ONE_TABLE_SERVICES
-    is_unique_key: false
-    key_columns:
-      - ORDER_STATUS_NAME
-    name_column: ORDER_STATUS_NAME
 relationships: []
 type: standard

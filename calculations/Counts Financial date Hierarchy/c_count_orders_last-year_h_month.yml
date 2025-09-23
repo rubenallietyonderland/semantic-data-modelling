@@ -1,0 +1,26 @@
+unique_name: c_count_orders_last-year_h_month
+object_type: metric_calc
+label: Count Orders -1 Year
+expression: >-
+  CASE WHEN [Created DIM_DATES_QUERY_dimension].[Created
+  DIM_DATES_QUERY_fiancial Hierarchy].CurrentMember.LEVEL_NUMBER 
+
+
+  <> 0 THEN
+
+
+  (ParallelPeriod([Created DIM_DATES_QUERY_dimension].[Created
+  DIM_DATES_QUERY_fiancial Hierarchy].[Created DIM_DATES_QUERY_month_year], 1,
+  [Created DIM_DATES_QUERY_dimension].[Created DIM_DATES_QUERY_fiancial
+  Hierarchy].CurrentMember),
+  [Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count]) 
+
+
+  ELSE  
+
+
+  10 
+
+
+  END
+mdx_aggregate_function: COUNT

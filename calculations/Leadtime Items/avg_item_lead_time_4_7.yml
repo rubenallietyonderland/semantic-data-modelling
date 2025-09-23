@@ -4,6 +4,6 @@ label: Avg - Arrived-warehouse - Processed
 expression: |-
   AVG(
         DESCENDANTS(
-        [MAPPING_SERVICES_BIG_TABLE].[Item Hierarchy].CurrentMember,
-        [MAPPING_SERVICES_BIG_TABLE].[Item Hierarchy].[MAPPING_SERVICES_BIG_TABLE_Item_id]), 
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_item_id].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_item_id].[MAPPING_SERVICES_BIG_TABLE_item_id]), 
         ([Measures].[m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_4_7_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct]))

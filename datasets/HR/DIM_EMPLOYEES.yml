@@ -5,17 +5,17 @@ columns:
   - name: EMPLOYEE_PK
     data_type: string
   - name: EMPLOYEE_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: MARKET_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: BUSINESS_UNIT_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: EMPLOYEE_NAME
     data_type: string
   - name: STORE_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: EMPLOYEE_EXTERNAL_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: UPDATED_AT
     data_type: datetime
   - name: BUSINESS_UNIT_FK

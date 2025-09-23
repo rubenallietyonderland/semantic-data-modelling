@@ -4,6 +4,6 @@ label: Avg - New - Paid-and-picked
 expression: |-
   AVG(
         DESCENDANTS(
-        [MAPPING_SERVICES_BIG_TABLE].[Order Hierarchy].CurrentMember,
-        [MAPPING_SERVICES_BIG_TABLE].[Order Hierarchy].[MAPPING_SERVICES_BIG_TABLE_order_id]), 
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_order_id].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_order_id].[MAPPING_SERVICES_BIG_TABLE_order_id]), 
         ([Measures].[m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_5_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count_not_distinct]))

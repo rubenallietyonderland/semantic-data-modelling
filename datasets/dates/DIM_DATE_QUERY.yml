@@ -38,20 +38,24 @@ columns:
     data_type: datetime
   - name: MART_LOAD_TIMESTAMP
     data_type: datetime
-  - name: WEEK_START_DATE
-    data_type: date
   - name: RETAIL_PERIOD
-    data_type: decimal(2,0)
+    data_type: long
   - name: RETAIL_QUARTER
-    data_type: decimal(1,0)
+    data_type: long
   - name: RETAIL_WEEK_NUMBER
-    data_type: decimal(2,0)
+    data_type: long
   - name: MONTH_NAME
     data_type: string
+  - name: RETAIL_YEAR
+    data_type: long
 connection_id: con_MART_CUSTOMERS
 sql: >-
-  select d.*, w.week_start_date, w.retail_period, w.retail_quarter,
-  w.retail_week_number, m.month_name from acc_lh_438.mart_dates.dim_dates d 
+  select d.* exclude (year, month, quarter)
+
+  ,w.retail_year, w.retail_quarter, w.retail_period, w.retail_week_number
+
+  , m.year, m.quarter, m.month, m.month_name,  from
+  acc_lh_438.mart_dates.dim_dates d 
 
 
   inner join acc_lh_438.mart_dates.dim_date_weeks w on d.year_week_id =

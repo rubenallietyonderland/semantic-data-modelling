@@ -5,10 +5,24 @@ hierarchies:
   - unique_name: DIM_SHOPS_dimension Hierarchy
     label: Shops Hierarchy
     levels:
-      - unique_name: DIM_SHOPS_type
-      - unique_name: DIM_SHOPS_name
-      - unique_name: DIM_SHOPS_code
       - unique_name: DIM_SHOPS_shop_id
+        secondary_attributes:
+          - unique_name: DIM_SHOPS_dimension_shop_name
+            label: Shop Name
+            contains_unique_names: false
+            dataset: DIM_SHOPS
+            is_unique_key: false
+            key_columns:
+              - SHOP_NAME
+            name_column: SHOP_NAME
+          - unique_name: DIM_SHOPS_dimension_shop_type
+            label: Shop Type
+            contains_unique_names: false
+            dataset: DIM_SHOPS
+            is_unique_key: false
+            key_columns:
+              - SHOP_TYPE
+            name_column: SHOP_TYPE
 level_attributes:
   - unique_name: DIM_SHOPS_shop_id
     label: Shop Id
@@ -19,28 +33,4 @@ level_attributes:
       - SHOP_PK
     name_column: SHOP_ID
     sort_column: SHOP_ID
-  - unique_name: DIM_SHOPS_name
-    label: Shop Name
-    contains_unique_names: false
-    dataset: DIM_SHOPS
-    is_unique_key: false
-    key_columns:
-      - SHOP_NAME
-    name_column: SHOP_NAME
-  - unique_name: DIM_SHOPS_code
-    label: Shop Code
-    contains_unique_names: false
-    dataset: DIM_SHOPS
-    is_unique_key: false
-    key_columns:
-      - SHOP_CODE
-    name_column: SHOP_CODE
-  - unique_name: DIM_SHOPS_type
-    label: Shop Type
-    contains_unique_names: false
-    dataset: DIM_SHOPS
-    is_unique_key: false
-    key_columns:
-      - SHOP_TYPE
-    name_column: SHOP_TYPE
 type: standard

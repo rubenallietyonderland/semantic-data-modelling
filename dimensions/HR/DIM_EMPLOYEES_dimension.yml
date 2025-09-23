@@ -5,8 +5,16 @@ hierarchies:
   - unique_name: DIM_EMPLOYEES_dimension Hierarchy
     label: Employee Hierarchy
     levels:
-      - unique_name: DIM_EMPLOYEES_name
       - unique_name: DIM_EMPLOYEES_id
+        secondary_attributes:
+          - unique_name: DIM_EMPLOYEES_dimension_employee_name
+            label: Employee name
+            contains_unique_names: false
+            dataset: DIM_EMPLOYEES
+            is_unique_key: false
+            key_columns:
+              - EMPLOYEE_NAME
+            name_column: EMPLOYEE_NAME
 level_attributes:
   - unique_name: DIM_EMPLOYEES_id
     label: Employee id
@@ -17,12 +25,4 @@ level_attributes:
       - EMPLOYEE_PK
     name_column: EMPLOYEE_ID
     sort_column: EMPLOYEE_ID
-  - unique_name: DIM_EMPLOYEES_name
-    label: Employee Name
-    contains_unique_names: false
-    dataset: DIM_EMPLOYEES
-    is_unique_key: false
-    key_columns:
-      - EMPLOYEE_NAME
-    name_column: EMPLOYEE_NAME
 type: standard
