@@ -6,6 +6,7 @@ hierarchies:
     label: Employee Hierarchy
     levels:
       - unique_name: DIM_EMPLOYEES_id
+        is_hidden: true
         secondary_attributes:
           - unique_name: DIM_EMPLOYEES_dimension_employee_name
             label: Employee name

@@ -6,6 +6,7 @@ hierarchies:
     label: Customer Hierarchy
     levels:
       - unique_name: DIM_CUSTOMERS_id
+        is_hidden: true
         secondary_attributes:
           - unique_name: DIM_CUSTOMERS_dimensio_uuid
             label: Customer uuid

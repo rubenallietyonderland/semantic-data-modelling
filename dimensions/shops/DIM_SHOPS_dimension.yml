@@ -6,6 +6,7 @@ hierarchies:
     label: Shops Hierarchy
     levels:
       - unique_name: DIM_SHOPS_shop_id
+        is_hidden: true
         secondary_attributes:
           - unique_name: DIM_SHOPS_dimension_shop_name
             label: Shop Name

@@ -6,6 +6,7 @@ hierarchies:
     label: Business Unit Hierarchy
     levels:
       - unique_name: DIM_BUSINESS_UNITS_id
+        is_hidden: true
         secondary_attributes:
           - unique_name: DIM_BUSINESS_UNITS_dimension_business_unit_name
             label: Business Unit Name

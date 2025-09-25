@@ -7,6 +7,7 @@ metrics:
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_OPEN_CLOSED_avg
   - unique_name: m_FCT_WARRANTY_CASES_LOGISTIC_CREATED_PICKED_SHIPPED_avg
   - unique_name: m_warranty_cases_count
+    folder: Counts
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_TIME_AT_SUPPLIER_avg
   - unique_name: m_FCT_WARRANTY_CASES_LEADTIME_CREATED_READY_FOR_PICK_UP_avg
 relationships:
@@ -35,14 +36,6 @@ relationships:
     to:
       dimension: DIM_BUSINESS_UNITS_dimension
       level: DIM_BUSINESS_UNITS_id
-  - unique_name: FCT_WARRANTY_CASES_CASE_CREATED_AT_to_DIM_DATES_dimension_DIM_DATES_id
-    from:
-      dataset: FCT_WARRANTY_CASES
-      join_columns:
-        - CASE_CREATED_AT
-    to:
-      dimension: DIM_DATES_dimension
-      level: DIM_DATES_id
   - unique_name: FCT_WARRANTY_CASES_SHOP_FK_to_DIM_SHOPS_dimension_DIM_SHOPS_shop_id
     from:
       dataset: FCT_WARRANTY_CASES
@@ -97,3 +90,23 @@ relationships:
     to:
       dimension: DIM_BRANDS_dimension
       level: DIM_BRANDS_brand_id
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_CREATED_AT_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_week_day
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_CREATED_AT
+    role_play: Created {0}
+    to:
+      dimension: DIM_DATES_QUERY_dimension
+      level: DIM_DATES_QUERY_week_day
+  - unique_name: >-
+      FCT_WARRANTY_CASES_CASE_CREATED_AT_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_month_day
+    from:
+      dataset: FCT_WARRANTY_CASES
+      join_columns:
+        - CASE_CREATED_AT
+    role_play: Created {0}
+    to:
+      dimension: DIM_DATES_QUERY_dimension
+      level: DIM_DATES_QUERY_month_day

@@ -1,0 +1,7 @@
+unique_name: test_composite_model
+object_type: composite_model
+label: Measures Services & Warranty
+metrics: []
+models:
+  - Services Measures
+  - Services_warranty

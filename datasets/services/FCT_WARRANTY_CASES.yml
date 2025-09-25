@@ -37,7 +37,7 @@ columns:
   - name: RMA_NUMBER
     data_type: string
   - name: CASE_CREATED_AT
-    data_type: long
+    data_type: decimal(38,0)
   - name: CASE_UPDATED_AT
     data_type: datetime
   - name: CASE_STATUS
@@ -179,24 +179,26 @@ columns:
           WHEN "FCT_WARRANTY_CASES"."LOGISTIC_STATUS" = 'ready-for-pickup' THEN 1
           ELSE 0
         END  
-connection_id: con_MART_SERVICES
+  - name: VOUCHER_ID
+    data_type: long
+connection_id: con_MART_CUSTOMERS
 sql: >-
   select w.*
 
-  from LAKEHOUSE_PRD.MART_SERVICES.FCT_WARRANTY_CASES w
+  from ACC_LH_438.MART_SERVICES.FCT_WARRANTY_CASES w
 
-  left join LAKEHOUSE_PRD.MART_HR.DIM_EMPLOYEES ec on
+  left join ACC_LH_438.MART_HR.DIM_EMPLOYEES ec on
   ec.employee_pk=w.case_created_by_employee_fk
 
-  left join LAKEHOUSE_PRD.MART_HR.DIM_EMPLOYEES eu on
+  left join ACC_LH_438.MART_HR.DIM_EMPLOYEES eu on
   eu.employee_pk=w.case_updated_by_employee_fk
 
-  left join LAKEHOUSE_PRD.MART_SHOPS.DIM_SHOPS s on s.shop_pk=w.shop_fk
+  left join ACC_LH_438.MART_SHOPS.DIM_SHOPS s on s.shop_pk=w.shop_fk
 
-  left join LAKEHOUSE_PRD.MART_CUSTOMERS.DIM_CUSTOMERS c on
+  left join ACC_LH_438.MART_CUSTOMERS.DIM_CUSTOMERS c on
   c.customer_pk=w.customer_fk
 
-  left join LAKEHOUSE_PRD.MART_SUPPLIERS_AND_BRANDS.DIM_BRANDS b on
+  left join ACC_LH_438.MART_SUPPLIERS_AND_BRANDS.DIM_BRANDS b on
   b.brand_pk=w.brand_fk
 
   where  

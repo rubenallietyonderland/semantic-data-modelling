@@ -1,6 +1,6 @@
 unique_name: MAPPING_WARRANTY_CASES
 object_type: dimension
-label: MAPPING_WARRANTY_CASES
+label: Attributes Warranty
 hierarchies:
   - unique_name: MAPPING_WARRANTY_CASES Hierarchy
     label: MAPPING_WARRANTY_CASES Hierarchy
