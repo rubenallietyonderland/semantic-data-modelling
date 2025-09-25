@@ -6,6 +6,7 @@ hierarchies:
     label: Markets Hierarchy
     levels:
       - unique_name: DIM_MARKETS_id
+        is_hidden: true
         secondary_attributes:
           - unique_name: DIM_MARKETS_dimension_market_name
             label: Market Name

@@ -272,5 +272,7 @@ columns:
     data_type: string
   - name: SERVICE_ARRIVED_WAREHOUSE_UPDATED_BY_EMPLOYEE_FK
     data_type: string
+  - name: BRAND_FK
+    data_type: string
 connection_id: con_MART_SERVICES
 table: FCT_ATSCALE_SERVICES

@@ -6,6 +6,7 @@ hierarchies:
     label: Product Category Services Hierarchy
     levels:
       - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Level
+        is_hidden: true
         secondary_attributes:
           - unique_name: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension_sub_type
             label: Product Sub Type

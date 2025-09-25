@@ -200,3 +200,11 @@ relationships:
     to:
       dimension: MAPPING_SERVICES_BIG_TABLE
       level: MAPPING_SERVICES_BIG_TABLE_service_item_id
+  - unique_name: FCT_ATSCALE_SERVICES_BRAND_FK_to_DIM_BRANDS_dimension_DIM_BRANDS_brand_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - BRAND_FK
+    to:
+      dimension: DIM_BRANDS_dimension
+      level: DIM_BRANDS_brand_id
