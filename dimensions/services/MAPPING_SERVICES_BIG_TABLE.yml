@@ -103,6 +103,14 @@ hierarchies:
             key_columns:
               - SERVICE_STATUS_NAME
             name_column: SERVICE_STATUS_NAME
+          - unique_name: MAPPING_SERVICES_BIG_TABLE_order_created_At
+            label: Order Created At
+            contains_unique_names: false
+            dataset: MAPPING_ONE_TABLE_SERVICES
+            is_unique_key: false
+            key_columns:
+              - ORDER_CREATED_AT
+            name_column: ORDER_CREATED_AT
 level_attributes:
   - unique_name: MAPPING_SERVICES_BIG_TABLE_service_item_id
     label: Service Item Id
