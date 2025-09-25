@@ -1,0 +1,9 @@
+unique_name: avg_order_lead_time_2_8
+object_type: metric_calc
+label: Avg - New - On-the-way-to-the-customer
+expression: |-
+  AVG(
+        DESCENDANTS(
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_order_id].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_order_id].[MAPPING_SERVICES_BIG_TABLE_order_id]), 
+        ([Measures].[m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_8_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_ORDER_ID_count_not_distinct]))

@@ -1,0 +1,66 @@
+unique_name: DIM_DATE_QUERY
+object_type: dataset
+label: DIM_DATE_QUERY
+columns:
+  - name: DATE_ID
+    data_type: long
+  - name: YEAR_MONTH_ID
+    data_type: long
+  - name: YEAR_WEEK_ID
+    data_type: long
+  - name: CALENDAR_DATE
+    data_type: date
+  - name: YEAR
+    data_type: long
+  - name: QUARTER
+    data_type: long
+  - name: MONTH
+    data_type: long
+  - name: WEEKDAY
+    data_type: long
+  - name: WEEKDAY_NAME_SHORT
+    data_type: string
+  - name: WEEKDAY_NAME_LONG
+    data_type: string
+  - name: IS_WEEKEND
+    data_type: boolean
+  - name: CALENDAR_SEASON
+    data_type: string
+  - name: ACADEMIC_YEAR
+    data_type: string
+  - name: IS_REPORTING_DAY
+    data_type: boolean
+  - name: UPDATED_AT
+    data_type: datetime
+  - name: INTERMEDIATE_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: OPS_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: MART_LOAD_TIMESTAMP
+    data_type: datetime
+  - name: RETAIL_PERIOD
+    data_type: long
+  - name: RETAIL_QUARTER
+    data_type: long
+  - name: RETAIL_WEEK_NUMBER
+    data_type: long
+  - name: MONTH_NAME
+    data_type: string
+  - name: RETAIL_YEAR
+    data_type: long
+connection_id: con_MART_CUSTOMERS
+sql: >-
+  select d.* exclude (year, month, quarter)
+
+  ,w.retail_year, w.retail_quarter, w.retail_period, w.retail_week_number
+
+  , m.year, m.quarter, m.month, m.month_name,  from
+  acc_lh_438.mart_dates.dim_dates d 
+
+
+  inner join acc_lh_438.mart_dates.dim_date_weeks w on d.year_week_id =
+  w.year_week_id
+
+
+  inner join acc_lh_438.mart_dates.dim_date_months m on d.year_month_id =
+  m.year_month_id

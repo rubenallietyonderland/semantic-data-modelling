@@ -5,9 +5,24 @@ hierarchies:
   - unique_name: DIM_SERVICE_LOCATIONS_HIST_dimension Hierarchy
     label: Service Locations Hierarchy
     levels:
-      - unique_name: DIM_SERVICE_LOCATIONS_HIST_type
-      - unique_name: DIM_SERVICE_LOCATIONS_HIST_name
       - unique_name: DIM_SERVICE_LOCATIONS_HIST_id
+        secondary_attributes:
+          - unique_name: DIM_SERVICE_LOCATIONS_HIST_dimension_location_name
+            label: Location Name
+            contains_unique_names: false
+            dataset: DIM_SERVICE_LOCATIONS_HIST
+            is_unique_key: false
+            key_columns:
+              - LOCATION_NAME
+            name_column: LOCATION_NAME
+          - unique_name: DIM_SERVICE_LOCATIONS_HIST_dimension_location_type
+            label: Location Type
+            contains_unique_names: false
+            dataset: DIM_SERVICE_LOCATIONS_HIST
+            is_unique_key: false
+            key_columns:
+              - LOCATION_TYPE_NAME
+            name_column: LOCATION_TYPE_NAME
 level_attributes:
   - unique_name: DIM_SERVICE_LOCATIONS_HIST_id
     label: Location Id
@@ -17,20 +32,4 @@ level_attributes:
     key_columns:
       - LOCATION_PK
     name_column: LOCATION_ID
-  - unique_name: DIM_SERVICE_LOCATIONS_HIST_name
-    label: Location
-    contains_unique_names: false
-    dataset: DIM_SERVICE_LOCATIONS_HIST
-    is_unique_key: false
-    key_columns:
-      - LOCATION_NAME
-    name_column: LOCATION_NAME
-  - unique_name: DIM_SERVICE_LOCATIONS_HIST_type
-    label: Location Type
-    contains_unique_names: false
-    dataset: DIM_SERVICE_LOCATIONS_HIST
-    is_unique_key: false
-    key_columns:
-      - LOCATION_TYPE_NAME
-    name_column: LOCATION_TYPE_NAME
 type: standard

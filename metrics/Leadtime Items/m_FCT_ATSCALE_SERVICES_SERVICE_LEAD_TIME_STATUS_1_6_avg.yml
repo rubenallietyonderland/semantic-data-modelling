@@ -1,0 +1,6 @@
+unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_1_6_avg
+object_type: metric
+label: Avg - New - Processed Location Leadtime
+calculation_method: average
+column: SERVICE_LEAD_TIME_STATUS_1_6
+dataset: FCT_ATSCALE_SERVICES

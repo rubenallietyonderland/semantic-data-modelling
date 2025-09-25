@@ -5,7 +5,7 @@ columns:
   - name: SERVICE_PRODUCT_CATEGORY_PK
     data_type: string
   - name: SERVICE_SUB_TYPE_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: SERVICE_SUB_TYPE_NAME
     data_type: string
   - name: SERVICE_SUB_TYPE_CREATED_AT
@@ -13,7 +13,7 @@ columns:
   - name: SERVICE_SUB_TYPE_UPDATED_AT
     data_type: string
   - name: SERVICE_TYPE_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: SERVICE_NAME
     data_type: string
   - name: SERVICE_CREATED_AT
@@ -21,7 +21,7 @@ columns:
   - name: SERVICE_UPDATED_AT
     data_type: string
   - name: PRODUCT_TYPE_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: PRODUCT_TYPE_NAME
     data_type: string
   - name: PRODUCT_TYPE_CREATED_AT
@@ -29,7 +29,7 @@ columns:
   - name: PRODUCT_TYPE_UPDATED_AT
     data_type: string
   - name: PRODUCT_CATEGORY_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: PRODUCT_CATEGORY_NAME
     data_type: string
   - name: PRODUCT_CATEGORY_CREATED_AT

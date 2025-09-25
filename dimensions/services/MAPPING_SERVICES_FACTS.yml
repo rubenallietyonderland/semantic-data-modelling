@@ -96,4 +96,16 @@ relationships:
     to:
       level: MAPPING_SERVICES_FACTS_item_id
     type: snowflake
+  - unique_name: >-
+      MAPPING_SERVICE_LOCATION_FK_to_DIM_SERVICE_LOCATIONS_HIST_dimension_DIM_SERVICE_LOCATIONS_HIST_id
+    from:
+      dataset: MAPPING_SERVICE
+      hierarchy: MAPPING_ORDERS_FACTS Hierarchy
+      join_columns:
+        - LOCATION_FK
+      level: MAPPING_SERVICES_FACTS_service_id
+    to:
+      dimension: DIM_SERVICE_LOCATIONS_HIST_dimension
+      level: DIM_SERVICE_LOCATIONS_HIST_id
+    type: embedded
 type: standard

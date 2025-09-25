@@ -1,7 +1,0 @@
-unique_name: m_item_count
-object_type: metric
-label: item count
-calculation_method: count distinct
-column: ITEM_ID
-dataset: FCT_SERVICE_ITEMS
-unrelated_dimensions_handling: repeat

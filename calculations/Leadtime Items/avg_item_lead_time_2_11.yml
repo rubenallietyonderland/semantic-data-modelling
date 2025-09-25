@@ -1,0 +1,9 @@
+unique_name: avg_item_lead_time_2_11
+object_type: metric_calc
+label: Avg - New - Ready-for-shipment
+expression: |-
+  AVG(
+        DESCENDANTS(
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_item_id].CurrentMember,
+        [MAPPING_SERVICES_BIG_TABLE].[MAPPING_SERVICES_BIG_TABLE_item_id].[MAPPING_SERVICES_BIG_TABLE_item_id]), 
+        ([Measures].[m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_11_sum]/ [Measures].[m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct]))

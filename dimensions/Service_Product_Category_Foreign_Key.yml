@@ -1,0 +1,18 @@
+unique_name: Service_Product_Category_Foreign_Key
+object_type: dimension
+label: Service Product Category Foreign Key
+hierarchies:
+  - unique_name: Service_Product_Category_Foreign_Key_Hierarchy
+    label: Service Product Category Foreign Key Hierarchy
+    levels:
+      - unique_name: Service_Product_Category_Foreign_Key_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Service_Product_Category_Foreign_Key_Level
+    label: Service Product Category Foreign Key Level
+    contains_unique_names: false
+    dataset: FCT_ATSCALE_SERVICES
+    key_columns:
+      - SERVICE_PRODUCT_CATEGORY_FK
+    name_column: SERVICE_PRODUCT_CATEGORY_FK
+type: standard

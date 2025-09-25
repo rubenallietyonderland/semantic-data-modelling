@@ -1,0 +1,203 @@
+unique_name: Services Measures
+object_type: model
+label: Services Measures
+dimensions: []
+metrics:
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_count
+    folder: Counts
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_ID_count
+    folder: Counts
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count
+    folder: Counts
+  - unique_name: c_count_orders_last-year_h_month
+    folder: Counts Financial Hierarchy
+  - unique_name: c_services_last_year_h_month
+    folder: Counts Financial Hierarchy
+  - unique_name: c_count_items_last-year_h_week
+    folder: Counts Retail Hierarchy
+  - unique_name: c_count_orders_last-year_h_week
+    folder: Counts Retail Hierarchy
+  - unique_name: c_services_last_year_h_week
+    folder: Counts Retail Hierarchy
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_14_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_ID_count_not_distinct
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_15_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_CREATED_AT_max
+    folder: Dates
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_1_2_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_11_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_2_12_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_3_4_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_4_7_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_14_15_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_11_12_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_ID_count_not_distinct
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_1_2_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_4_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_7_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_5_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_2_8_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_4_5_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_ORDER_LEAD_TIME_STATUS_7_8_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_ID_count_not_distinct
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_1_6_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_13_4_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_4_6_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_1_21_sum
+  - unique_name: m_FCT_ATSCALE_SERVICES_SERVICE_LEAD_TIME_STATUS_24_21_sum
+  - unique_name: avg_order_lead_time_1_2
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_4
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_5
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_7
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_2_8
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_4_5
+    folder: Leadtime Orders
+  - unique_name: avg_order_lead_time_7_8
+    folder: Leadtime Orders
+  - unique_name: avg_item_lead_time_1_2
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_11_12
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_14_15
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_11
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_12
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_14
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_2_15
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_3_4
+    folder: Leadtime Items
+  - unique_name: avg_item_lead_time_4_7
+    folder: Leadtime Items
+  - unique_name: avg_service_lead_time_1_21
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_1_6
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_13_4
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_24_21
+    folder: Leadtime Services
+  - unique_name: avg_service_lead_time_4_6
+    folder: Leadtime Services
+  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_1_2_avg_test
+  - unique_name: avg_item_lead_time_1_2 copy
+relationships:
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - BUSINESS_UNIT_FK
+    to:
+      dimension: DIM_BUSINESS_UNITS_dimension
+      level: DIM_BUSINESS_UNITS_id
+  - unique_name: FCT_ATSCALE_SERVICES_MARKET_FK_to_DIM_MARKETS_dimension_DIM_MARKETS_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - MARKET_FK
+    to:
+      dimension: DIM_MARKETS_dimension
+      level: DIM_MARKETS_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_CREATED_BY_EMPLOYEE_FK_to_DIM_EMPLOYEES_dimension_DIM_EMPLOYEES_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_CREATED_BY_EMPLOYEE_FK
+    to:
+      dimension: DIM_EMPLOYEES_dimension
+      level: DIM_EMPLOYEES_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_CUSTOMER_FK_to_DIM_CUSTOMERS_dimension_DIM_CUSTOMERS_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - CUSTOMER_FK
+    to:
+      dimension: DIM_CUSTOMERS_dimension
+      level: DIM_CUSTOMERS_id
+  - unique_name: FCT_ATSCALE_SERVICES_SHOP_FK_to_DIM_SHOPS_dimension_DIM_SHOPS_shop_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - SHOP_FK
+    to:
+      dimension: DIM_SHOPS_dimension
+      level: DIM_SHOPS_shop_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_LOCATION_FK_to_DIM_SERVICE_LOCATIONS_HIST_dimension_DIM_SERVICE_LOCATIONS_HIST_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - LOCATION_FK
+    to:
+      dimension: DIM_SERVICE_LOCATIONS_HIST_dimension
+      level: DIM_SERVICE_LOCATIONS_HIST_id
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_SERVICE_PRODUCT_CATEGORY_FK_to_DIM_SERVICE_PRODUCT_CATEGORY_SERVICES
+      Level
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - SERVICE_PRODUCT_CATEGORY_FK
+    to:
+      dimension: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension
+      level: DIM_SERVICE_PRODUCT_CATEGORY_SERVICES_dimension Level
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_DATE_ID_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_month_day
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ITEM_PROCESSED_DATE_ID
+    role_play: Processed {0}
+    to:
+      dimension: DIM_DATES_QUERY_dimension
+      level: DIM_DATES_QUERY_month_day
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ITEM_PROCESSED_DATE_ID_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_week_day
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ITEM_PROCESSED_DATE_ID
+    role_play: Processed {0}
+    to:
+      dimension: DIM_DATES_QUERY_dimension
+      level: DIM_DATES_QUERY_week_day
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_CREATED_AT_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_month_day
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_DATE_ID
+    role_play: Created {0}
+    to:
+      dimension: DIM_DATES_QUERY_dimension
+      level: DIM_DATES_QUERY_month_day
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_ORDER_CREATED_AT_to_DIM_DATES_QUERY_dimension_DIM_DATES_QUERY_week_day
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - ORDER_DATE_ID
+    role_play: Created {0}
+    to:
+      dimension: DIM_DATES_QUERY_dimension
+      level: DIM_DATES_QUERY_week_day
+  - unique_name: >-
+      FCT_ATSCALE_SERVICES_SERVICE_ITEM_ID_to_MAPPING_SERVICES_BIG_TABLE_MAPPING_SERVICES_BIG_TABLE_service_item_id
+    from:
+      dataset: FCT_ATSCALE_SERVICES
+      join_columns:
+        - SERVICE_ITEM_ID
+    to:
+      dimension: MAPPING_SERVICES_BIG_TABLE
+      level: MAPPING_SERVICES_BIG_TABLE_service_item_id

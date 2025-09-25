@@ -9,7 +9,7 @@ columns:
   - name: BUSINESS_UNIT_FK
     data_type: string
   - name: SHOP_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: SHOP_CODE
     data_type: string
   - name: SHOP_NAME
@@ -19,9 +19,9 @@ columns:
   - name: SHOP_CODE_SHOP_NAME
     data_type: string
   - name: PARENT_SHOP_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: SHOP_PRICING_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: BRANCH
     data_type: string
   - name: BRANCH_DESCRIPTION
@@ -29,19 +29,19 @@ columns:
   - name: LIKE_FOR_LIKE
     data_type: string
   - name: SALES_FLOOR_SIZE
-    data_type: decimal(1,0)
+    data_type: long
   - name: TOTAL_FLOOR_SIZE
-    data_type: decimal(1,0)
+    data_type: long
   - name: CLUSTER
     data_type: string
   - name: DISTRICT
     data_type: string
   - name: AREA
-    data_type: decimal(38,0)
+    data_type: long
   - name: LEGAL_ENTITY
     data_type: string
   - name: COUNTRY_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: POSTAL_CODE
     data_type: string
   - name: LOCATION

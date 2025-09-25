@@ -3,15 +3,15 @@ object_type: dataset
 label: MAPPING_ONE_TABLE_SERVICE
 columns:
   - name: ORDER_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: ITEM_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: SERVICE_ITEM_PK
     data_type: string
   - name: SERVICE_ITEM_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: SERVICE_ID
-    data_type: decimal(38,0)
+    data_type: long
   - name: PRICING
     data_type: double
   - name: PROMISED_LEAD_TIME
@@ -19,7 +19,7 @@ columns:
   - name: FLAG_MULTIPLESERVICES
     data_type: string
   - name: NUMBER_OF_LOCATIONS
-    data_type: decimal(18,0)
+    data_type: long
   - name: MULTIPLESERVICE_DESCRIPTION
     data_type: string
   - name: SERVICE_STATUS_NAME
@@ -38,23 +38,32 @@ columns:
     data_type: string
   - name: LT_PRODUCT_CAT
     data_type: string
-connection_id: con_MART_SERVICES
-sql: >-
+  - name: ORDER_CREATED_AT
+    data_type: datetime
+connection_id: con_OPS_DATES
+sql: |-
   SELECT 
-
-  ORDER_PK, ORDER_ID, ORDER_STATUS_NAME,
-
-  ITEM_PK, ITEM_ID, ITEM_STATUS_NAME,
-
-  SERVICE_ITEM_PK, SERVICE_ITEM_ID, SERVICE_ID, PRICING, PROMISED_LEAD_TIME,
-  FLAG_MULTIPLESERVICES, NUMBER_OF_LOCATIONS, MULTIPLESERVICE_DESCRIPTION,
-  SERVICE_STATUS_NAME, SERVICE_CREATED_BY_EMPLOYEE_FK,
+  ORDER_PK, 
+  ORDER_ID, 
+  ORDER_STATUS_NAME, 
+  CAST(ORDER_CREATED_AT as TIMESTAMP_NTZ(9)) AS ORDER_CREATED_AT,
+  ITEM_PK, 
+  ITEM_ID, 
+  ITEM_STATUS_NAME,
+  SERVICE_ITEM_PK, 
+  SERVICE_ITEM_ID, 
+  SERVICE_ID, 
+  PRICING, 
+  PROMISED_LEAD_TIME, 
+  FLAG_MULTIPLESERVICES, 
+  NUMBER_OF_LOCATIONS, 
+  MULTIPLESERVICE_DESCRIPTION, 
+  SERVICE_STATUS_NAME, 
+  SERVICE_CREATED_BY_EMPLOYEE_FK, 
   SERVICE_ARRIVED_WAREHOUSE_UPDATED_BY_EMPLOYEE_FK, 
-
   CASE WHEN ITEM_LEAD_TIME_STATUS_2_15   < 14 THEN '< 2 weeks'
        WHEN ITEM_LEAD_TIME_STATUS_2_15   > 14 AND  ITEM_LEAD_TIME_STATUS_2_15  < 21 THEN '> 2 weeks'
         WHEN ITEM_LEAD_TIME_STATUS_2_15   > 21 AND ITEM_LEAD_TIME_STATUS_2_15   < 28 THEN  '> 3 weeks'
           WHEN ITEM_LEAD_TIME_STATUS_2_15   > 28 THEN '> 4 weeks' ELSE '' END as LT_product_Cat
   FROM
-
   ACC_LH_438.MART_SERVICES.FCT_ATSCALE_SERVICES
