@@ -1,0 +1,6 @@
+unique_name: m_warranty_cases_count
+object_type: metric
+label: Warranty Cases
+calculation_method: count distinct
+column: CASE_ID
+dataset: FCT_WARRANTY_CASES

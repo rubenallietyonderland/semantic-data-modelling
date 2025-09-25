@@ -1,0 +1,6 @@
+unique_name: con_MART_SUPPLIERS_AND_BRANDS
+object_type: connection
+label: con_MART_SUPPLIERS_AND_BRANDS
+as_connection: snowflake
+database: LAKEHOUSE_PRD
+schema: MART_SUPPLIERS_AND_BRANDS

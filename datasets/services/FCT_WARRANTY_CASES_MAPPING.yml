@@ -1,0 +1,17 @@
+unique_name: FCT_WARRANTY_CASES_MAPPING
+object_type: dataset
+label: FCT_WARRANTY_CASES_MAPPING
+columns:
+  - name: CASE_PK
+    data_type: string
+  - name: CASE_STATUS
+    data_type: string
+  - name: CASE_ACCOUNTING_STATUS
+    data_type: string
+  - name: LOGISTIC_STATUS
+    data_type: string
+connection_id: con_MART_SERVICES
+sql: |-
+  SELECT 
+  CASE_PK, CASE_STATUS, CASE_ACCOUNTING_STATUS, LOGISTIC_STATUS
+  FROM MART_SERVICES.FCT_WARRANTY_CASES
