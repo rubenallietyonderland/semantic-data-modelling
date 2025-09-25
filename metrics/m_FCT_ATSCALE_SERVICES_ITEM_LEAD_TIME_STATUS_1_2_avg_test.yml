@@ -1,6 +1,0 @@
-unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_1_2_avg_test
-object_type: metric
-label: avg test
-calculation_method: average
-column: ITEM_LEAD_TIME_STATUS_1_2
-dataset: FCT_ATSCALE_SERVICES

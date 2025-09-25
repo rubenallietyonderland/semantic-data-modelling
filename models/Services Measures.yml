@@ -87,8 +87,6 @@ metrics:
     folder: Leadtime Services
   - unique_name: avg_service_lead_time_4_6
     folder: Leadtime Services
-  - unique_name: m_FCT_ATSCALE_SERVICES_ITEM_LEAD_TIME_STATUS_1_2_avg_test
-  - unique_name: avg_item_lead_time_1_2 copy
 relationships:
   - unique_name: >-
       FCT_ATSCALE_SERVICES_BUSINESS_UNIT_FK_to_DIM_BUSINESS_UNITS_dimension_DIM_BUSINESS_UNITS_id
@@ -113,6 +111,7 @@ relationships:
       dataset: FCT_ATSCALE_SERVICES
       join_columns:
         - ORDER_CREATED_BY_EMPLOYEE_FK
+    role_play: Created {0}
     to:
       dimension: DIM_EMPLOYEES_dimension
       level: DIM_EMPLOYEES_id
