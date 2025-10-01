@@ -6,7 +6,6 @@ hierarchies:
     label: MAPPING_WARRANTY_CASES Hierarchy
     levels:
       - unique_name: CASE_PK
-        is_hidden: true
         secondary_attributes:
           - unique_name: Case Status
             label: Case Status
@@ -76,7 +75,7 @@ level_attributes:
     label: CASE_PK
     contains_unique_names: false
     dataset: FCT_WARRANTY_CASES
-    is_unique_key: false
+    is_unique_key: true
     key_columns:
       - CASE_PK
     name_column: CASE_PK

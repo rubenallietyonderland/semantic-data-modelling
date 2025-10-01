@@ -1,6 +1,6 @@
 unique_name: con_OPS_DATES
 object_type: connection
 label: con_OPS_DATES
-as_connection: {{CONNECTION}}
-database: {{DB_NAME}}
+as_connection: ${CONNECTION}
+database: ${DB_NAME}
 schema: OPS_DATES

@@ -1,6 +1,6 @@
 unique_name: con_MART_SHOPS
 object_type: connection
 label: con_MART_SHOPS
-as_connection: {{CONNECTION}}
-database: {{DB_NAME}}
+as_connection: ${CONNECTION}
+database: ${DB_NAME}
 schema: MART_SHOPS

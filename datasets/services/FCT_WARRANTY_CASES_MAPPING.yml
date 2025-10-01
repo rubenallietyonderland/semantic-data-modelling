@@ -10,8 +10,8 @@ columns:
     data_type: string
   - name: LOGISTIC_STATUS
     data_type: string
-connection_id: con_MART_SERVICES
+connection_id: con_MART_CUSTOMERS
 sql: |-
   SELECT 
   CASE_PK, CASE_STATUS, CASE_ACCOUNTING_STATUS, LOGISTIC_STATUS
-  FROM MART_SERVICES.FCT_WARRANTY_CASES
+  FROM ACC_LH_438.MART_SERVICES.FCT_WARRANTY_CASES
